@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/custom.scss'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
+import NextNProgress from "nextjs-progressbar";
 import Layout from '../components/layout'
 import http from '@/helpers/http';
 import { useEffect } from 'react';
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps, siteSettings }) {
       return(
         <>
         <ToastContainer />
+        <NextNProgress color="#fc5e24" />
         <Layout siteSettings={siteSettings}>{page}</Layout>;
 
       </>

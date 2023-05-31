@@ -18,8 +18,7 @@ export const getServerSideProps = async () => {
 };
 
 export default function About({ result }) {
-  let meta_tags = result.meta_tags;
-  let site_content = result.site_content;
+  const { meta_tags, site_content } = result;
 
   return (
     <>

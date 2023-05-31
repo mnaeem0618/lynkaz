@@ -20,9 +20,7 @@ export const getServerSideProps = async () => {
 };
 
 export default function Contact({ result }) {
-  let meta_tags = result.meta_tags;
-  let site_content = result.content;
-  let site_settings = result.site_settings;
+  const { meta_tags, site_content, site_settings } = result;
 
   const [form, setForm] = React.useState({
     name: "",

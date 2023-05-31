@@ -3,7 +3,7 @@ import { doParseHTML } from "../helpers/helper";
 export default function Text({
   string = "default",
   length = false,
-  parse = true
+  parse = true,
 }) {
   if (length)
     if (string.length > length) string = string.slice(0, length) + "...";

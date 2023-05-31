@@ -18,8 +18,7 @@ export const getServerSideProps = async () => {
 };
 
 export default function Login({ result }) {
-  let meta_tags = result.meta_tags;
-  let site_content = result.content;
+  const { meta_tags, site_content } = result;
 
   const [openTab, setOpenTab] = React.useState(1);
   return (

@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import Text from "@/components/text";
 
-import {doObjToFormData } from "@/helpers/helper";
+import { doObjToFormData } from "@/helpers/helper";
 
 import http from "../helpers/http";
 
@@ -11,58 +11,49 @@ import { TOAST_SETTINGS } from "@/config/settings";
 import { toast } from "react-toastify";
 
 export default function Footer({ siteSettings }) {
-
-
   const [form, setForm] = React.useState({
-    email:'',
+    email: "",
+  });
 
-});
+  const [loading, setLoading] = useState(false);
 
-const [loading, setLoading] = useState(false);
-
-const handleChange = (event) => {
+  const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
     });
   };
 
-async function handleSubmit(e) {
-e.preventDefault();
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-setLoading(true);
+    setLoading(true);
 
-// console.log(form)
+    // console.log(form)
 
-const result = await http
-.post("save_newsletter", doObjToFormData(form))
-.then((response) => {
-    if(response.data.msg){
-        toast.success(<Text string={response.data.msg} />, TOAST_SETTINGS)
-        setLoading(false)
-        setForm({
-            email:'',
-        })
-    }else{
-        
-        toast.error(<Text string={response.data.validation_error} />, TOAST_SETTINGS)
-       
+    const result = await http
+      .post("save_newsletter", doObjToFormData(form))
+      .then((response) => {
+        if (response.data.msg) {
+          toast.success(<Text string={response.data.msg} />, TOAST_SETTINGS);
+          setLoading(false);
+          setForm({
+            email: "",
+          });
+        } else {
+          toast.error(
+            <Text string={response.data.validation_error} />,
+            TOAST_SETTINGS
+          );
 
-        setLoading(false)
+          setLoading(false);
+        }
+      })
 
-    }  
+      .catch((error) => error.response.data.message);
 
-})
-
-.catch((error) => error.response.data.message);
-
-// toast.success(result, TOAST_SETTINGS);
- 
-
-
-}
-
-
+    // toast.success(result, TOAST_SETTINGS);
+  }
 
   // console.log(siteSettings);
   const data = {
@@ -191,7 +182,7 @@ const result = await http
                 })}
               </ul>
               <ul className="list">
-              {siteSettings.footer.slice(3, 6).map((val) => {
+                {siteSettings.footer.slice(3, 6).map((val) => {
                   return (
                     <li key={val.id}>
                       <Link href={val.txt1}>{val.title}</Link>
@@ -205,7 +196,9 @@ const result = await http
             <div className="in_col subscribe">
               <h4>Join Our Mailing List</h4>
               <span>
-                <Text string={siteSettings.site_settings.site_newsletter_text} />
+                <Text
+                  string={siteSettings.site_settings.site_newsletter_text}
+                />
               </span>
               <form onSubmit={handleSubmit} method="POST">
                 <input
@@ -219,7 +212,7 @@ const result = await http
                   required
                 />
                 <button type="submit" className="site_btn" disabled={loading}>
-                  Submit{loading && <i className="spinner"></i> }
+                  Submit{loading && <i className="spinner"></i>}
                 </button>
               </form>
             </div>
@@ -227,7 +220,13 @@ const result = await http
         </div>
       </div>
       <div className="copyright">
-        <p className="text-center">Copyright © {new Date().getFullYear()} By <Link href="/" className="regular" style={{fontWeight:"bold"}}><Text string={siteSettings.site_settings.site_name }/> </Link>. <Text string={siteSettings.site_settings.site_copyright} /></p>
+        <p className="text-center">
+          Copyright © {new Date().getFullYear()} By{" "}
+          <Link href="/" className="regular" style={{ fontWeight: "bold" }}>
+            <Text string={siteSettings.site_settings.site_name} />{" "}
+          </Link>
+          . <Text string={siteSettings.site_settings.site_copyright} />
+        </p>
       </div>
     </footer>
   );

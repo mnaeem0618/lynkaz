@@ -19,9 +19,7 @@ export const getServerSideProps = async () => {
 };
 
 export default function Faq({ result }) {
-  let meta_tags = result.meta_tags;
-  let site_content = result.content;
-  let faqs = result.faqs;
+  const { meta_tags, site_content, faqs } = result;
 
   const [openAccordion, setOpenAccordion] = useState(null);
   const accordionRefs = useRef([]);

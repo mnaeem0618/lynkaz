@@ -1,0 +1,299 @@
+{
+    "workflow": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Transform your procurement workflow into a seamless and collaborative process123",
+        "banner_description": "Lynkaz provides a customizable workflow solution that enables you to automate your procurement processes and ensure consistent and efficient execution across your organization. With Lynkaz, you can achieve better operational control and drive more strategic decision-making.Lynkaz provides a customizable workflow solution that enables you to automate your procurement processes and ensure consistent and efficient execution across your organization. With Lynkaz, you can achieve better operational control and drive more strategic decision-making.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Effortless Workflow Design: Simplify Process Automation",
+                "description":"Effortlessly design and automate workflows with our intuitive interface, simplifying complex processes and driving efficiency throughout your organization."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Seamless Communication: Collaborate and Communicate Within the App",
+                "description":"Enhance collaboration and streamline communication within the app, eliminating the need for external channels, empowering users to efficiently interact, and drive seamless decision-making processes."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Trace and Track with Ease: Transparent Workflow Visibility",
+                "description":"Gain complete transparency and control over workflows with effortless traceability. Easily track progress, monitor approvals, and ensure accountability for a streamlined procurement process."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Efficient Approvals: Streamline Decision-Making Process",
+                "description":"Streamline your decision-making process with efficient approvals. Simplify and expedite the approval process, ensuring timely actions and smoother procurement operations."
+            }
+        ]
+    },
+    "mobile": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Procurement at Your Fingertips: Anytime, Anywhere",
+        "banner_description": "Experience seamless procurement operations on the go with our mobile application. Access and manage your procurement needs anytime, anywhere, putting the power of procurement at your fingertips.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Intuitive & User-Friendly Design: Procurement On-the-Go",
+                "description":"Mobile convenience, simplified procurement: Seamlessly manage operations on-the-go, anytime, anywhere. Boost efficiency, streamline processes, and stay connected with our intuitive mobile app."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Information at Your Fingertips: Real-Time Insights Anywhere",
+                "description":"Instant access to real-time insights: Stay informed and make informed decisions on-the-go, ensuring efficiency and agility in your procurement operations."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Mobile-Enabled Procurement: Perform Operations Anytime, Anywhere",
+                "description":"Unleash mobile potential: Seamlessly conduct procurement operations anywhere, anytime, ensuring productivity and flexibility in your procurement processes."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Vendor Collaboration Made Easy: Seamless Communication On Mobile",
+                "description":"Streamlined vendor communication: Effortlessly collaborate and connect with vendors through seamless mobile interaction, enhancing efficiency and strengthening partnerships."
+            }
+        ]
+    },
+    "vendor_portal": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Effortless Vendor Management: Simplify Collaboration and Communication",
+        "banner_description": "Streamline vendor collaboration and communication with our effortless vendor management solution. Simplify interactions, enhance communication, and strengthen relationships for seamless procurement operations.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Seamless Vendor Interaction: Effortless Communication and Collaboration",
+                "description":"Streamline Vendor Interactions: Enhance Communication and Collaboration Effortlessly. Empower Vendors with Centralized Document Access, Real-time Updates, and Easy Monitoring of Documents and Amendments."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Robust Vendor Profile Management: Simplify Vendor Information and Document Handling",
+                "description":"Efficiently Manage Vendor Profiles: Streamline Information and Document Handling for Simplified Vendor Engagement. Enhance Collaboration and Vendor Information can be Access from a Centralized Platform."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"RFQ Management Made Easy: Simplify RFQ Creation and Handling Supplier Queries",
+                "description":"Simplify RFQ Creation and Supplier Queries: Effortlessly Manage RFQs and Collaborate with Suppliers for Smooth Bidding and Awarding Processes. Streamline Supplier Communication and Enhance RFQ Handling Efficiency."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Transparent Progress Monitoring: Stay Informed on Contract Updates and Amendments",
+                "description":"Stay Updated on Contract Changes: Track Contract Progress and Amendments with Transparency. Ensure Real-time Visibility into Contract Updates for Effective Vendor Engagement."
+            }
+        ]
+    },
+    "rfx_management": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Efficient RFx Management: Simplify Bidding, Procurement and Sourcing",
+        "banner_description": "Efficient RFx Management: Simplify Bidding, Procurement and Sourcing",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Intuitive RFQ Management: Effortless Bidding and Negotiation",
+                "description":"Streamline RFQ management with an intuitive interface, enabling effortless bidding and negotiation. Simplify the procurement process, enhance vendor communication, and ensure seamless operations for successful RFQ handling."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Seamless Vendor Communication: Streamlined Bidding Process",
+                "description":"Facilitate efficient vendor communication, enabling a streamlined bidding process. Enhance collaboration, simplify negotiations, and ensure seamless communication between buyers and vendors for successful RFQ management."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Timely Responses: Efficient Vendor Engagement and Collaboration",
+                "description":"Accelerate vendor engagement and foster efficient collaboration through prompt and timely responses. Enhance communication channels to achieve seamless procurement interactions and successful outcomes."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Simplified RFQ Handling: Easy Query Management and Amendment Handling",
+                "description":"Effortlessly manage RFQs with streamlined query handling and seamless amendment management. Simplify the entire RFQ process for efficient procurement operations and improved vendor engagement."
+            }
+        ]
+    },
+    "contract_management": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Effortless Contract Control: Simplify, Streamline, and Manage",
+        "banner_description": "Our Contract Management Module offers a streamlined and simplified approach to managing contracts, allowing you to easily handle the entire contract lifecycle with efficiency and ease, also ensuring accuracy and compliance.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Streamlined Contract Management: Intuitive and User-Friendly Interface",
+                "description":"Effortlessly manage contracts with a user-friendly interface, simplifying the entire contract lifecycle from creation to closure. Streamline processes, enhance collaboration, and ensure compliance with ease."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Streamlined Communication: Efficient Collaboration on Contract Terms",
+                "description":"Facilitate effective collaboration and communication on contract terms with streamlined processes. Enhance efficiency and accuracy in managing contract negotiations and revisions, ensuring seamless collaboration between stakeholders."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Robust Workflow Automation: Simplify Contract Lifecycle Management",
+                "description":"Efficiently manage the entire contract lifecycle with robust workflow automation, streamlining processes and ensuring seamless contract creation, execution, and monitoring. Simplify contract management for increased productivity."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Comprehensive Contract Control: Amendments, Billing Terms, and Version Management",
+                "description":"Achieve comprehensive control over contracts with ease. Manage amendments, billing terms, and contract versions effortlessly, ensuring accuracy and transparency throughout the contract lifecycle."
+            }
+        ]
+    },
+    "budget": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Streamlined Budget Oversight: Optimize Procurement Performance and Cost Efficiency",
+        "banner_description": "Efficiently manage your procurement performance and optimize cost efficiency with our budget module. Stay on track, make informed decisions, and achieve financial success in your procurement and sourcing operations.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Flexible Budget Management: Adapt to Changing Needs",
+                "description":"Effortlessly manage budgets with dynamic controls and real-time insights. Adapt to changing needs, optimize spend, and maintain financial flexibility throughout the procurement process. Stay in control, stay on budget."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Intuitive Interface: Simplified Budget Oversight",
+                "description":"Streamline budget oversight with an intuitive interface. Gain clear visibility into spending, track expenses, and manage budgets effortlessly. Simplify financial control and make informed procurement decisions."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Robust Workflow: Efficient Budget Allocation and Tracking",
+                "description":"Efficiently allocate and track budgets with a robust workflow. Seamlessly manage spending, monitor expenses, and ensure effective budget utilization for streamlined procurement operations."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Real-Time Monitoring: Stay Within Budgetary Limits",
+                "description":"Stay within budgetary limits with real-time monitoring. Gain visibility into expenses, manage costs, and make informed decisions to ensure effective budget management in procurement operations."
+            }
+        ]
+    },
+    "purchase_requisition": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Efficient Purchase Requisition Management: Streamline and Simplify Procurement Process",
+        "banner_description": "Efficient Purchase Requisition Management simplifies and streamlines the procurement process, ensuring seamless request submission, robust workflow, and improved procurement efficiency for enhanced operational effectiveness.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Modern & Intuitive: User-Friendly Purchase Requisition",
+                "description":"Effortless Requisition Creation: Simplify the process of requesting purchases through a modern and intuitive interface, enabling users to easily submit their requisitions for streamlined procurement workflows."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Streamlined Workflow: Efficient Handling of Requisitions",
+                "description":"Efficient Requisition Management: Seamlessly handle and process purchase requisitions through a streamlined workflow system, ensuring smooth and timely procurement operations."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Mobile-Enabled Requisitions: Anytime, Anywhere Request Submission",
+                "description":"On-the-Go Requisition Submission: Submit purchase requests anytime, anywhere through our mobile-enabled platform, enhancing convenience and efficiency in the procurement process."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Budget Control: Ensure Procurement Within Budget Limits",
+                "description":"Cost-Conscious Procurement: Maintain budgetary limits by implementing effective budget control measures, ensuring optimal utilization of resources and adherence to financial targets."
+            }
+        ]
+    },
+    "survey_questionnaire": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Efficient Vendor Performance Management: Maximize Procurement Success",
+        "banner_description": "Efficient Vendor Performance Management optimizes procurement success by tracking, evaluating, and improving vendor performance. Enhance supplier relationships, ensure compliance, and drive operational excellence for better outcomes and cost savings.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Vendor Performance Monitoring: Track and Evaluate Vendor Performance",
+                "description":"Efficiently monitor and evaluate vendor performance to ensure high-quality service delivery, identify areas for improvement, and drive strategic decision-making for enhanced operational outcomes."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Feedback and Insights: Gather Valuable Vendor and Internal Feedback",
+                "description":"Collect valuable feedback from vendors and internal stakeholders to gain insights, enhance collaboration, and drive continuous improvement in procurement processes and vendor relationships."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Continuous Scoring and Rating: Measure and Monitor Progress Continuously",
+                "description":"Ensure continuous measurement and monitoring of progress through scoring and rating mechanisms, enabling effective performance evaluation and improvement tracking in procurement and vendor management."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Pre-Qualification Questionnaires: Ensure Vendor Compliance and Qualification",
+                "description":"Efficiently assess vendor compliance and qualification through pre-qualification questionnaires, ensuring adherence to necessary standards and criteria for successful vendor selection and engagement."
+            }
+        ]
+    },
+    "vendor_invoice": {
+        "id": 1,
+        "banner_image": "/images/f1.png",
+        "banner_title": "Seamless Vendor Invoice Management: Simplify and Streamline Operations",
+        "banner_description": "Achieve smooth vendor invoice management with our seamless module. Simplify and streamline your operations, ensuring efficient invoice processing, accurate record-keeping, and effective communication for timely payments.",
+        
+        "feature_loop":[
+            {
+                "id":1,
+                "image":"/images/f2.png",
+                "title":"Effortless Invoicing: Streamline Your Invoice Operations",
+                "description":"Simplify your invoicing process with ease, ensuring smooth operations and efficient management of invoices without unnecessary complexities or complications."
+            },
+            {
+                "id":2,
+                "image":"/images/f3.png",
+                "title":"Vendor Portal: Simplify Invoice Submission and Communication",
+                "description":"Simplify the invoice submission and communication process with our vendor portal. Streamline interactions, enhance collaboration, and expedite invoice handling for seamless operations."
+            },
+            {
+                "id":3,
+                "image":"/images/f4.png",
+                "title":"Dispute Resolution: Efficiently Manage Invoice Discrepancies",
+                "description":"Efficiently manage invoice discrepancies through streamlined communication and documentation. Facilitate resolution and maintain a comprehensive record of all interactions for future reference and smooth invoice operations."
+            },
+            {
+                "id":4,
+                "image":"/images/f5.png",
+                "title":"Robust Workflow: Seamless Invoice Processing and Approval",
+                "description":"Effortlessly manage the entire invoice processing and approval cycle with a robust workflow system. Automate tasks, track progress, and ensure timely payments while reducing manual effort and errors. Streamline your invoice operations for maximum efficiency."
+            }
+        ]
+    }
+}

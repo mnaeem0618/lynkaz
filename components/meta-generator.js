@@ -28,7 +28,7 @@ export default function MetaGenerator({ page_title, meta_desc }) {
           />
           <meta
             property="twitter:image"
-            content={cmsFileUrl(meta_desc.thumbnail)}
+            content={meta_desc.thumbnail}
           />
         </Head>
       )}

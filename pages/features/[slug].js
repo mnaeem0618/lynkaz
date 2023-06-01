@@ -23,10 +23,9 @@ export const getServerSideProps = async (context) => {
 
 export default function features({ result }) {
   // console.log(result);
-  let meta_tags = result.meta_tags;
-  let feature = result.feature;
-  let feature_data = result.feature_data;
-  let site_content = result.site_content;
+
+  const { meta_tags, feature, feature_data, site_content, feature_detail } =
+    result;
 
   if (feature != undefined) {
     return (
@@ -100,100 +99,36 @@ export default function features({ result }) {
                         </div>
                     </div> */}
               <div className="outer_flex_feature">
-                <div className="flex">
-                  <div className="col">
-                    <Shape />
-                    <div className="image">
-                      {/* <img src={val.image} alt="" /> */}
-                      <Image
-                        src={cmsFileUrl(feature_data.image2, "features")}
-                        width={645}
-                        height={372}
-                        alt={feature.name}
-                      />
+                {feature_detail.map((val) => {
+                  return (
+                    <div className="flex" key={val.id}>
+                      <div className="col">
+                        <Shape />
+                        <div className="image">
+                          {/* <img src={val.image} alt="" /> */}
+                          <Image
+                            src={cmsFileUrl(val.image, "features")}
+                            width={645}
+                            height={372}
+                            alt={val.title}
+                          />
+                        </div>
+                      </div>
+                      <div className="col">
+                        <div className="sec_heading">
+                          <h2>
+                            <Text string={val.title} />
+                          </h2>
+                        </div>
+                        <Text string={val.detail} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col">
-                    <div className="sec_heading">
-                      <h2>
-                        <Text string={feature_data.heading_section2} />
-                      </h2>
-                    </div>
-                    <Text string={feature_data.detail_section2} />
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="col">
-                    <Shape />
-                    <div className="image">
-                      {/* <img src={val.image} alt="" /> */}
-                      <Image
-                        src={cmsFileUrl(feature_data.image3, "features")}
-                        width={645}
-                        height={372}
-                        alt={feature.name}
-                      />
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="sec_heading">
-                      <h2>
-                        <Text string={feature_data.heading_section3} />
-                      </h2>
-                    </div>
-                    <Text string={feature_data.detail_section3} />
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="col">
-                    <Shape />
-                    <div className="image">
-                      {/* <img src={val.image} alt="" /> */}
-                      <Image
-                        src={cmsFileUrl(feature_data.image4, "features")}
-                        width={645}
-                        height={372}
-                        alt={feature.name}
-                      />
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="sec_heading">
-                      <h2>
-                        <Text string={feature_data.heading_section4} />
-                      </h2>
-                    </div>
-                    <Text string={feature_data.detail_section4} />
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="col">
-                    <Shape />
-                    <div className="image">
-                      {/* <img src={val.image} alt="" /> */}
-                      <Image
-                        src={cmsFileUrl(feature_data.image5, "features")}
-                        width={645}
-                        height={372}
-                        alt={feature.name}
-                      />
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="sec_heading">
-                      <h2>
-                        <Text string={feature_data.heading_section5} />
-                      </h2>
-                    </div>
-                    <Text string={feature_data.detail_section5} />
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </section>
+
           <section className="big_img_sec">
             <div className="contain">
               <div className="highlight_blk feature_highlight">

@@ -22,11 +22,10 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function Solutions({ result }) {
-  let meta_tags = result.meta_tags;
-  let solution = result.solution;
-  let solution_cards = result.solution_cards;
-  let site_content = result.site_content;
-  let sub_solutions = result.sub_solutions;
+
+  const {meta_tags, solution, solution_cards, site_content, sub_solutions} = result;
+
+
 
   if (meta_tags != undefined) {
     return (

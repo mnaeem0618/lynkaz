@@ -30,6 +30,7 @@ export default function Header({ siteSettings }) {
     setFeatures(!features);
   };
 
+ 
   return (
     <header className={scroll || path != "/" ? "fix" : ""}>
       <div className="contain-fluid">
@@ -56,7 +57,7 @@ export default function Header({ siteSettings }) {
             </li>
 
             <li className="drop">
-              <Link href="/" onClick={ToggleFeatures}>
+              <Link href="/">
                 Features
               </Link>
               <ul className={features ? "sub active" : "sub"}>
@@ -95,7 +96,7 @@ export default function Header({ siteSettings }) {
               </ul>
             </li>
             <li className="drop">
-              <Link href="/" onClick={ToggleSolutions}>
+              <Link href="/">
                 Solutions
               </Link>
               <ul className={solutions ? "sub active" : "sub"}>

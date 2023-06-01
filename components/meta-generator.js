@@ -17,7 +17,7 @@ export default function MetaGenerator({ page_title, meta_desc }) {
           <meta property="og:url" content={url} />
           <meta property="og:title" content={meta_desc.og_title} />
           <meta property="og:description" content={meta_desc.og_description} />
-          <meta property="og:image" content={cmsFileUrl(meta_desc.thumbnail)} />
+          <meta property="og:image" content={meta_desc.thumbnail} />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content={url} />

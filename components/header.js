@@ -52,9 +52,7 @@ export default function Header({ siteSettings }) {
         </div>
         <nav id="nav" className={toggle ? "active" : ""}>
           <ul>
-            <li>
-              <Link href="/about">About Us</Link>
-            </li>
+            
 
             <li className="drop">
               <Link href="/">
@@ -70,11 +68,11 @@ export default function Header({ siteSettings }) {
                             src={cmsFileUrl(feature.icon, "features")}
                             width={50}
                             height={50}
-                            alt={feature.name}
+                            alt={feature.title}
                           />
                         </span>
                         <span>
-                          <Text string={feature.name} />
+                          <Text string={feature.title} />
                           <em>
                             <Text string={feature.short_desc} />
                           </em>
@@ -109,11 +107,11 @@ export default function Header({ siteSettings }) {
                             src={cmsFileUrl(sol.icon, "solutions")}
                             width={50}
                             height={50}
-                            alt={sol.title}
+                            alt={sol.name}
                           />
                         </span>
                         <span>
-                          <Text string={sol.title} />
+                          <Text string={sol.name} />
                           <em>
                             <Text string={sol.short_desc} />
                           </em>
@@ -129,6 +127,11 @@ export default function Header({ siteSettings }) {
                   <li><Link href="/solutions/shared-service-procurement"><span><img src="/images/icons/icon4.svg" alt="" /></span><span>Shared Service Procurement<em>Cross reference and verify accounts payable expenses</em></span></Link></li> */}
               </ul>
             </li>
+
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+
             <li className="hide_navigation_lnk_desktop">
               <Link href="/contact">Contact Us</Link>
             </li>

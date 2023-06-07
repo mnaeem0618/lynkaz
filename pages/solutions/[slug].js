@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Shape from "@/components/shape";
-import feature from "../api/feature-data.json";
+import solution from "../api/solutions-data.json";
+
 import { useRouter } from "next/router";
 import Text from "@/components/text";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { cmsFileUrl } from "@/helpers/helper";
 import http from "@/helpers/http";
 
 import MetaGenerator from "@/components/meta-generator";
+import Image_video from "@/components/Image_video";
 
 export const getServerSideProps = async (context) => {
   const { slug } = context.query;
@@ -24,13 +26,13 @@ export const getServerSideProps = async (context) => {
 export default function Solutions({ result }) {
   console.log(result);
 
-  const { meta_tags, solution, feature_data, site_content, feature_detail } =
+  const { meta_tags, solution, solution_data, site_content, solution_details } =
     result;
 
-  if (feature != undefined) {
+  if (solution != undefined) {
     return (
       <>
-        <MetaGenerator page_title={feature.name} meta_desc={meta_tags} />
+        <MetaGenerator page_title={solution.name} meta_desc={meta_tags} />
 
         <main>
           <section className="feature_banner">
@@ -38,10 +40,10 @@ export default function Solutions({ result }) {
               <div className="flex">
                 <div className="colL">
                   <h1>
-                    <Text string={feature.heading} />
+                    <Text string={solution.heading} />
                   </h1>
 
-                  <Text string={feature.details} />
+                  <Text string={solution.details} />
 
                   <div className="btn_blk">
                     <Link href={site_content.link_url} className="site_btn">
@@ -56,12 +58,13 @@ export default function Solutions({ result }) {
                   <Shape />
                   <div className="image">
                     {/* <img src={page_data.banner_image} alt="" /> */}
-                    <Image
-                      src={cmsFileUrl(feature.image, "features")}
+                    <Image_video file_name={solution.file} file_loc='solutions' />
+                    {/* <Image
+                      src={cmsFileUrl(solution.image, "solutions")}
                       width={625}
                       height={441}
-                      alt={feature.name}
-                    />
+                      alt={solution.name}
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -99,7 +102,7 @@ export default function Solutions({ result }) {
                         </div>
                     </div> */}
               <div className="outer_flex_feature">
-                {feature_detail.map((val) => {
+                {solution_details.map((val) => {
                   return (
                     <div className="flex" key={val.id}>
                       <div className="col">
@@ -107,7 +110,7 @@ export default function Solutions({ result }) {
                         <div className="image">
                           {/* <img src={val.image} alt="" /> */}
                           <Image
-                            src={cmsFileUrl(val.image, "features")}
+                            src={cmsFileUrl(val.image, "solutions")}
                             width={645}
                             height={372}
                             alt={val.title}
@@ -135,14 +138,14 @@ export default function Solutions({ result }) {
                 <div className="cntnt text-center">
                   <div className="sec_heading">
                     <h2>
-                      <Text string={feature_data.section6_heading} />
+                      <Text string={solution_data.section6_heading} />
                     </h2>
                     <p>
-                      <Text string={feature_data.section6_desc} />
+                      <Text string={solution_data.section6_desc} />
                     </p>
                   </div>
                 </div>
-                <Text string={feature_data.section6_detail} />
+                <Text string={solution_data.section6_detail} />
               </div>
             </div>
           </section>

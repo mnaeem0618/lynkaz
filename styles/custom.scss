@@ -2871,6 +2871,9 @@ nav {
         &.active {
           display: flex;
         }
+        &.hide_sub_menu{
+          display: none;
+        }
         > li {
           display: block;
           width: 50%;
@@ -3156,7 +3159,7 @@ footer {
         background: $light;
         border: 1px solid rgba(255, 255, 255, 0.02);
         border-radius: 5px;
-        color: #000;
+        color: $light;
         padding-right: 6rem;
         // &:not(:hover) {
         //   border-color: rgba($light, 0.3);

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Shape from "@/components/shape";
-import solution from "../api/solutions-data.json";
+import feature from "../api/feature-data.json";
+
 import { useRouter } from "next/router";
 import Text from "@/components/text";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { cmsFileUrl } from "@/helpers/helper";
 import http from "@/helpers/http";
 
 import MetaGenerator from "@/components/meta-generator";
+import Image_video from "@/components/Image_video";
 
 export const getServerSideProps = async (context) => {
   const { slug } = context.query;
@@ -61,12 +63,16 @@ export default function features({ result }) {
                   <Shape />
                   <div className="image">
                     {/* <img src={page_data.banner_image} alt="Lynkaz" /> */}
-                    <Image
+
+                    <Image_video file_name={feature.file} file_loc='features' />
+                  
+
+                    {/* <Image
                       src={cmsFileUrl(feature.image, "features")}
                       width={595}
                       height={391}
                       alt={feature.title}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

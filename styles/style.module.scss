@@ -1659,6 +1659,13 @@
         @include radius(0);
         background-color: transparent;
         z-index: 2;
+        video{
+          object-fit: cover;
+          inline-size: 100%;
+          block-size: 100%;
+          padding: 0;
+          @include pos;
+        }
         img{
           @include pos;
           @include object(contain);
@@ -1773,25 +1780,25 @@
       
     }
     .image{
-      @include img(57%);
+      @include img(70%);
       @include radius(12);
       background: #ffffff00;
-      // box-shadow: none;
+      box-shadow: none;
       z-index: 2;
       img{
         @include pos;
-        @include object;
+        @include object(contain);
       }
     }
     .shape_bg{
       position: absolute;
-      top: -5rem;
+      top: -3rem;
       left: -2rem;
       bottom: 0rem;
       right: -2rem;
       svg{
         width: 100%;
-        height: 47rem;
+        height: 45rem;
         @include ipad{
           height: 121%;
           width: 96%;
@@ -1805,7 +1812,7 @@
       }
     }
     &:nth-child(even){
-      padding: 11rem 0;
+      padding: 7rem 0;
       flex-direction: row-reverse;
       .col{
         &:nth-child(2){
@@ -1904,6 +1911,13 @@
         background-color: transparent;
         filter: drop-shadow(0px 3.72222px 46.5278px rgba(35, 41, 214, 0.13));
         z-index: 2;
+        video{
+          object-fit: cover;
+          inline-size: 100%;
+          block-size: 100%;
+          padding: 0;
+          @include pos;
+        }
         img{
           @include pos;
           @include object(contain);
@@ -2116,6 +2130,53 @@
     overflow: hidden;
     img{
       @include object;
+    }
+  }
+}
+// ======new_about_me======
+.new_about_me{
+  padding-bottom: 0;
+  .flex{
+    .colL{
+      width: 45%;
+      position: relative;
+      @include ipad_sm{
+        width: 100%;
+      }
+      .image{
+        width:85%;
+        @include img(70%);
+        margin-right: auto;
+        background:transparent;
+        box-shadow: none;
+        z-index: 1;
+        img{
+          @include pos;
+          @include object(cover,top);
+        }
+      }
+      .dots_image{
+        width: 85%;
+        @include img(69%);
+        margin-left: auto;
+        background:transparent;
+        box-shadow: none;
+        @include pos($t:5.5rem,$r:null,$l:5.5rem,$b:null);
+        
+        img{
+          @include pos;
+          @include object(cover,top);
+        }
+      }
+    }
+    .colR{
+      width: 55%;
+      padding-left: 2rem;
+      @include ipad_sm{
+        width: 100%;
+        padding-left: 0;
+        margin-top: 7rem;
+      }
     }
   }
 }

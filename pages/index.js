@@ -5,6 +5,7 @@ import Shape from "@/components/shape";
 import Text from "@/components/text";
 import Image from "next/image";
 import { cmsFileUrl, getFileExtension } from "@/helpers/helper";
+import Image_video from "@/components/Image_video";
 
 import http from "../helpers/http";
 import MetaGenerator from "@/components/meta-generator";
@@ -21,7 +22,7 @@ export const getServerSideProps = async () => {
 export default function Index({ result }) {
   const { meta_tags, site_content, home_features } = result;
 
-  let ext = getFileExtension(site_content.file1);
+  // let ext = getFileExtension(site_content.file1);
 
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
   return (
@@ -59,7 +60,8 @@ export default function Index({ result }) {
                 <div className="image">
                   {/* <img src="images/banner-image1.svg" alt="Lynkaz" /> */}
 
-                  {ext == "mp4" || ext == "webm" ? (
+                  <Image_video file_name={site_content.file1} />
+                  {/* {ext == "mp4" || ext == "webm" ? (
                     <video
                       className="CuAnimation_video__70Pvw"
                       height="1224"
@@ -84,7 +86,7 @@ export default function Index({ result }) {
                       height={447}
                       alt="banner"
                     />
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

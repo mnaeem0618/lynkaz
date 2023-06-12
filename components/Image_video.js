@@ -6,7 +6,7 @@ import Text from "@/components/text";
 import Image from "next/image";
 import { cmsFileUrl, getFileExtension } from "@/helpers/helper";
 
-export default function Image_video({file_name, file_loc='images'}){
+export default function Image_video({file_name, file_loc='images', poster}){
 
     let ext = getFileExtension(file_name);
 
@@ -21,7 +21,7 @@ export default function Image_video({file_name, file_loc='images'}){
                       muted={true}
                       loop={true}
                       playsInline={true}
-                      poster="images/logo.svg"
+                      poster={poster}
                       preload="auto"
                     >
                       <source

@@ -24,7 +24,7 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function features({ result }) {
-  console.log(result);
+  // console.log(result);
 
   const {meta_tags, feature, feature_cards, site_content, sub_features} = result;
 
@@ -64,7 +64,7 @@ export default function features({ result }) {
                   <div className="image">
                     {/* <img src={page_data.banner_image} alt="Lynkaz" /> */}
 
-                    <Image_video file_name={feature.file} file_loc='features' />
+                    <Image_video file_name={feature.file} file_loc='features' poster={meta_tags.thumbnail} />
                   
 
                     {/* <Image

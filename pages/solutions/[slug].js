@@ -24,7 +24,7 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function Solutions({ result }) {
-  console.log(result);
+  // console.log(result);
 
   const { meta_tags, solution, solution_data, site_content, solution_details } =
     result;
@@ -58,7 +58,7 @@ export default function Solutions({ result }) {
                   <Shape />
                   <div className="image">
                     {/* <img src={page_data.banner_image} alt="" /> */}
-                    <Image_video file_name={solution.file} file_loc='solutions' />
+                    <Image_video file_name={solution.file} file_loc='solutions' poster={meta_tags.thumbnail} />
                     {/* <Image
                       src={cmsFileUrl(solution.image, "solutions")}
                       width={625}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tawk.to/tawk-messenger-react": "^2.0.2",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "framer-motion": "^10.12.12",

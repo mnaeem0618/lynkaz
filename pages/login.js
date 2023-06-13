@@ -38,7 +38,7 @@ export default function Login({ result }) {
                 </h1>
               </div>
               <div className="image">
-                {/* <img src="images/logon.png" alt="" /> */}
+              
                 <Image
                   src={cmsFileUrl(site_content.image1)}
                   width={660}
@@ -140,7 +140,7 @@ export default function Login({ result }) {
                       </div>
                       <div className="btn_blk">
                         <button className="site_btn block">
-                          <span>Sign In</span>{" "}
+                          <span>Sign In</span>
                           <img src="images/circle-arrow-right.svg" alt="" />
                         </button>
                       </div>
@@ -227,14 +227,14 @@ export default function Login({ result }) {
                       <div className="lbl_btn">
                         <input type="checkbox" name="agree" id="agree" />
                         <label htmlFor="agree">
-                          By clicking “Submit” you agree to our{" "}
-                          <Link href="/terms">Terms of use</Link> and{" "}
+                          By clicking “Submit” you agree to our
+                          <Link href="/terms">Terms of use</Link> and
                           <Link href="/policy">Privacy Policy</Link>
                         </label>
                       </div>
                       <div className="btn_blk">
                         <button className="site_btn block">
-                          <span>Submit</span>{" "}
+                          <span>Submit</span>
                           <img src="images/circle-arrow-right.svg" alt="" />
                         </button>
                       </div>

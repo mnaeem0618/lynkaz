@@ -32,8 +32,8 @@ export default function App({ Component, pageProps, siteSettings }) {
                 widgetId={siteSettings.site_settings.site_tawk_widget_id} />
 
         </>
-      );
-    };
+      )
+    }
 
   return renderWithLayout(<Component {...pageProps} />);
 }

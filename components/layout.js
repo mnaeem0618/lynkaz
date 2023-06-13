@@ -13,13 +13,13 @@ export default function Layout({ children, siteSettings }) {
         {children}
         <Footer siteSettings={siteSettings} />
       </div>
-    );
+    )
   } else {
     return (
       <div className="content">
         <SiteMaster />
         {children}
       </div>
-    );
+    )
   }
 }

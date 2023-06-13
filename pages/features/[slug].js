@@ -19,12 +19,12 @@ export const getServerSideProps = async (context) => {
     .get(`feature/${slug}`)
     .then((response) => response.data)
     .catch((error) => error.response.data.message);
-    // console.log(result);
+    
   return { props: { result } };
 };
 
 export default function features({ result }) {
-  // console.log(result);
+  
 
   const {meta_tags, feature, feature_cards, site_content, sub_features} = result;
 
@@ -54,7 +54,7 @@ export default function features({ result }) {
                     <Link href={site_content.link_url} className="site_btn">
                       <span>
                         <Text string={site_content.link_text} />
-                      </span>{" "}
+                      </span>
                       <img src="/images/circle-arrow-right.svg" alt="" />
                     </Link>
                   </div>
@@ -62,17 +62,12 @@ export default function features({ result }) {
                 <div className="colR">
                   <Shape />
                   <div className="image">
-                    {/* <img src={page_data.banner_image} alt="Lynkaz" /> */}
+                   
 
                     <Image_video file_name={feature.file} file_loc='features' poster={meta_tags.thumbnail} />
                   
 
-                    {/* <Image
-                      src={cmsFileUrl(feature.image, "features")}
-                      width={595}
-                      height={391}
-                      alt={feature.title}
-                    /> */}
+                   
                   </div>
                 </div>
               </div>
@@ -87,7 +82,7 @@ export default function features({ result }) {
                       <div className="inner">
                         <div className="head_inner">
                           <div className="icon_img">
-                            {/* <img src="/images/icons/s_icon1.svg" alt="" /> */}
+                            
                             <Image
                               src={cmsFileUrl(card.image, "features")}
                               width={35}
@@ -127,7 +122,7 @@ export default function features({ result }) {
                       <div className="flex">
                         <div className="col">
                           <div className="image">
-                            {/* <img src={val.image} alt="" /> */}
+                           
                             <Image
                               src={cmsFileUrl(val.image, "features")}
                               width={585}
@@ -150,91 +145,7 @@ export default function features({ result }) {
                   </div>
                 );
               })}
-              {/* <div className="inner_solution_loop">
-                        <div className="contain">
-                            <div className="flex">
-                                <div className="col">
-                                    <div className="image">
-                                        <img src="/images/s2.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="sec_heading">
-                                        <h2>Requisition spend wisely, control risk, and promote compliance</h2>
-                                    </div>
-                                    <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="inner_solution_loop">
-                        <div className="contain">
-                            <div className="flex">
-                                <div className="col">
-                                    <div className="image">
-                                        <img src="/images/s3.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="sec_heading">
-                                        <h2>Approve spend wisely, control risk, and promote compliance</h2>
-                                    </div>
-                                    <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="inner_solution_loop">
-                        <div className="contain">
-                            <div className="flex">
-                                <div className="col">
-                                    <div className="image">
-                                        <img src="/images/s4.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="sec_heading">
-                                        <h2>Purchase spend wisely, control risk, and promote compliance</h2>
-                                    </div>
-                                    <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="inner_solution_loop">
-                        <div className="contain">
-                            <div className="flex">
-                                <div className="col">
-                                    <div className="image">
-                                        <img src="/images/s5.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="sec_heading">
-                                        <h2>Receive spend wisely, control risk, and promote compliance</h2>
-                                    </div>
-                                    <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="inner_solution_loop">
-                        <div className="contain">
-                            <div className="flex">
-                                <div className="col">
-                                    <div className="image">
-                                        <img src="/images/s6.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="sec_heading">
-                                        <h2>Payable spend wisely, control risk, and promote compliance</h2>
-                                    </div>
-                                    <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
+             
             </div>
           </section>
           <section className="cta_sec">
@@ -251,7 +162,7 @@ export default function features({ result }) {
                   <Link href={site_content.link1_url} className="site_btn">
                     <span>
                       <Text string={site_content.link1_text} />
-                    </span>{" "}
+                    </span>
                     <img src="/images/circle-arrow-right.svg" alt="" />
                   </Link>
                   <Link
@@ -260,7 +171,7 @@ export default function features({ result }) {
                   >
                     <span>
                       <Text string={site_content.link2_text} />
-                    </span>{" "}
+                    </span>
                     <img src="/images/circle-arrow-right.svg" alt="" />
                   </Link>
                 </div>
@@ -277,6 +188,6 @@ export default function features({ result }) {
           <img src="/images/loading.gif" alt="" />
         </div>
       </div>
-    );
+    )
   }
 }

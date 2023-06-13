@@ -29,7 +29,7 @@ export default function Footer({ siteSettings }) {
 
     setLoading(true);
 
-    // console.log(form)
+   
 
     const result = await http
       .post("save_newsletter", doObjToFormData(form))
@@ -52,10 +52,9 @@ export default function Footer({ siteSettings }) {
 
       .catch((error) => error.response.data.message);
 
-    // toast.success(result, TOAST_SETTINGS);
   }
 
-  // console.log(siteSettings);
+ 
   const data = {
     list_02: [
       {
@@ -221,9 +220,9 @@ export default function Footer({ siteSettings }) {
       </div>
       <div className="copyright">
         <p className="text-center">
-          Copyright © {new Date().getFullYear()} By{" "}
+          Copyright © {new Date().getFullYear()} By
           <Link href="/" className="regular" style={{ fontWeight: "bold" }}>
-            <Text string={siteSettings.site_settings.site_name} />{" "}
+            <Text string={siteSettings.site_settings.site_name} />
           </Link>
           . <Text string={siteSettings.site_settings.site_copyright} />
         </p>

@@ -44,7 +44,7 @@ export default function Contact({ result }) {
 
     setLoading(true);
 
-    // console.log(form)
+    
 
     const result = await http
       .post("save_contact", doObjToFormData(form))
@@ -72,7 +72,7 @@ export default function Contact({ result }) {
 
       .catch((error) => error.response.data.message);
 
-    // toast.success(result, TOAST_SETTINGS);
+   
   }
   return (
     <>
@@ -104,7 +104,7 @@ export default function Contact({ result }) {
                   <h3>
                     <Text string={site_content.side_heading} />
                   </h3>
-                  {/* <p>Suspendisse posuere nisi eu neque pharetra tristique iaculis erat tempor. Curabitur sed justo auctor sodals nunc in finibus purus donec tellus tristique iaculis erat tempor.</p> */}
+                  
 
                   <Text string={site_content.side_detail} />
 
@@ -261,9 +261,9 @@ export default function Contact({ result }) {
                           className="site_btn color"
                           disabled={loading}
                         >
-                          <img src="images/send.svg" alt="" />{" "}
+                          <img src="images/send.svg" alt="" />
                           <span>
-                            Send Message{" "}
+                            Send Message
                             {loading && <i className="spinner"></i>}
                           </span>
                         </button>

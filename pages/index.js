@@ -22,7 +22,7 @@ export const getServerSideProps = async () => {
 export default function Index({ result }) {
   const { meta_tags, site_content, home_features } = result;
 
-  // let ext = getFileExtension(site_content.file1);
+ 
 
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
   return (
@@ -50,7 +50,7 @@ export default function Index({ result }) {
                   >
                     <span>
                       <Text string={site_content.banner_link_text} />
-                    </span>{" "}
+                    </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
                 </div>
@@ -58,35 +58,10 @@ export default function Index({ result }) {
               <div className="colR">
                 <Shape />
                 <div className="image">
-                  {/* <img src="images/banner-image1.svg" alt="Lynkaz" /> */}
+                
 
                   <Image_video file_name={site_content.file1} />
-                  {/* {ext == "mp4" || ext == "webm" ? (
-                    <video
-                      className="CuAnimation_video__70Pvw"
-                      height="1224"
-                      width="1880"
-                      autoPlay={true}
-                      muted={true}
-                      loop={true}
-                      playsInline={true}
-                      poster="images/logo.svg"
-                      preload="auto"
-                    >
-                      <source
-                        type="video/webm"
-                        src={cmsFileUrl(site_content.file1)}
-                        data-src={cmsFileUrl(site_content.file1)}
-                      />
-                    </video>
-                  ) : (
-                    <Image
-                      src={cmsFileUrl(site_content.file1)}
-                      width={670}
-                      height={447}
-                      alt="banner"
-                    />
-                  )} */}
+                
                 </div>
               </div>
             </div>
@@ -96,15 +71,15 @@ export default function Index({ result }) {
           <div className="contain">
             <div className="cntnt text-center">
               <div className="sec_heading">
-                {/* <h2>Unlock procurement excellence, focus on what matters</h2> */}
+               
                 <Text string={site_content.section1_text} />
               </div>
-              {/* <p>Empower your team with our procurement solution and reclaim valuable time for strategic initiatives.</p> */}
+             
             </div>
             <div className="flex">
               <div className="col">
                 <div className="img_icon">
-                  {/* <img src="images/icons/sec_icon1.svg" alt="" /> */}
+                
                   <Image
                     src={cmsFileUrl(site_content.image2)}
                     width={50}
@@ -151,13 +126,7 @@ export default function Index({ result }) {
                   <Text string={site_content.sec1_text4} />
                 </p>
               </div>
-              {/* <div className="col">
-                  <div className="img_icon">
-                    <img src="images/icons/sec_icon4.svg" alt="" />
-                  </div>
-                  <h4>Unleash Procurement Transparency</h4>
-                  <p>Effortlessly manage and monitor operations for tighter spend controls</p>
-                </div> */}
+             
             </div>
           </div>
         </section>
@@ -175,7 +144,7 @@ export default function Index({ result }) {
             <div className="flex grid_flex">
               <div className="colL">
                 <div className="image">
-                  {/* <img src="images/experience_img.svg" alt="" /> */}
+                 
                   <Image
                     src={cmsFileUrl(site_content.image5)}
                     width={742}
@@ -200,7 +169,7 @@ export default function Index({ result }) {
                   >
                     <span>
                       <Text string={site_content.section2_link_text} />
-                    </span>{" "}
+                    </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
                 </div>
@@ -220,8 +189,6 @@ export default function Index({ result }) {
             </div>
             <div className="tabs_blk">
               <div className="cntnt">
-                {/* <p><strong>Welcome to Lynkaz</strong> – the ultimate solution for all your procurement and sourcing needs. Our cutting-edge application is designed to address the most common procurement challenges and streamline your procurement operations from start to finish.</p>
-                  <p>At Lynkaz, we understand that procurement can be a complex and time-consuming process. Poor procurement management can result in overspending, missed opportunities, and even compliance issues. That's why we developed an intuitive, user-friendly application that simplifies the entire procurement process and helps you make better purchasing decisions.</p> */}
                 <div className="sec_heading text-center">
                   <h2>
                     <Text string={site_content.section3_block_heading} />
@@ -245,7 +212,7 @@ export default function Index({ result }) {
                           role="tablist"
                         >
                           <div className="img_icon">
-                            {/* <img src="images/icons/tab_icon3.svg" alt="" /> */}
+                           
                             <Image
                               src={cmsFileUrl(val.icon)}
                               width={50}
@@ -281,21 +248,16 @@ export default function Index({ result }) {
                         >
                           <div className="colL">
                             <div className="sec_heading">
-                              {/* <h2>Solution from procure to pay</h2> */}
+                            
                               <Text string={val.details} />
                             </div>
-                            {/* <p>
-                          We offer an end-to-end solution that covers everything
-                          from sourcing and procurement to payment processing.
-                          With Lynkaz, you can easily manage purchase orders,
-                          vendor communications, and invoices, all in one place.
-                        </p> */}
+                            
                             <div className="btn_blk">
                               <Link
                                 href={val.link_url}
                                 className="site_btn color"
                               >
-                                <span>{val.link_text}</span>{" "}
+                                <span>{val.link_text}</span>
                                 <img
                                   src="images/circle-arrow-right.svg"
                                   alt=""
@@ -305,7 +267,7 @@ export default function Index({ result }) {
                           </div>
                           <div className="colR">
                             <div className="image">
-                              {/* <img src="images/tab_image1.svg" alt="" /> */}
+                             
                               <Image
                                 src={cmsFileUrl(val.image)}
                                 width={585}
@@ -331,7 +293,7 @@ export default function Index({ result }) {
                   <div className="inner">
                     <div className="head_inner">
                       <div className="icon_img">
-                        {/* <img src="images/solutions_icon1.svg" alt="" /> */}
+                        
                         <Image
                           src={cmsFileUrl(site_content.image6)}
                           width={35}
@@ -434,7 +396,7 @@ export default function Index({ result }) {
               </div>
               <div className="colR">
                 <div className="image">
-                  {/* <img src="images/choose3.png" alt="" /> */}
+                
                   <Image
                     src={cmsFileUrl(site_content.image10)}
                     width={615}

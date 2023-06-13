@@ -19,12 +19,12 @@ export const getServerSideProps = async (context) => {
     .get(`solution/${slug}`)
     .then((response) => response.data)
     .catch((error) => error.response.data.message);
-  //   console.log(result);
+
   return { props: { result } };
 };
 
 export default function Solutions({ result }) {
-  // console.log(result);
+
 
   const { meta_tags, solution, solution_data, site_content, solution_details } =
     result;
@@ -49,7 +49,7 @@ export default function Solutions({ result }) {
                     <Link href={site_content.link_url} className="site_btn">
                       <span>
                         <Text string={site_content.link_text} />
-                      </span>{" "}
+                      </span>
                       <img src="/images/circle-arrow-right.svg" alt="" />
                     </Link>
                   </div>
@@ -57,50 +57,18 @@ export default function Solutions({ result }) {
                 <div className="colR">
                   <Shape />
                   <div className="image">
-                    {/* <img src={page_data.banner_image} alt="" /> */}
+                  
                     <Image_video file_name={solution.file} file_loc='solutions' poster={meta_tags.thumbnail} />
-                    {/* <Image
-                      src={cmsFileUrl(solution.image, "solutions")}
-                      width={625}
-                      height={441}
-                      alt={solution.name}
-                    /> */}
+                   
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* <section className="icons_feature_sec">
-                <div className="contain">
-                    <div className="flex">
-                        <div className="col">
-                            <div className="inner">
-                                <div className="icon_img">
-                                    <img src="/images/icons/f_icon1.svg" alt="" />
-                                </div>
-                                <h3>System that is trustworthy for internal orders</h3>
-                                <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="inner">
-                                <div className="icon_img">
-                                    <img src="/images/icons/f_icon2.svg" alt="" />
-                                </div>
-                                <h3>Requisitions can be used to get rid of paper traces.</h3>
-                                <p>Our cloud spend management software covers purchase requests, approval workflows, budgeting, and spend analysis. It is user-friendly, effective, and versatile. Real-time tracking and accountability will help you gain new levels of control and visibility. All of them are linked with your current ERP or accounting system.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
+          
           <section className="feature_gid_loop">
             <div className="contain">
-              {/* <div className="cntnt text-center">
-                        <div className="sec_heading">
-                            <h2>Requisitions Should Be Converted Into Purchase Orders Using A Single Efficient Management System.</h2>
-                        </div>
-                    </div> */}
+             
               <div className="outer_flex_feature">
                 {solution_details.map((val) => {
                   return (
@@ -108,7 +76,7 @@ export default function Solutions({ result }) {
                       <div className="col">
                         <Shape />
                         <div className="image">
-                          {/* <img src={val.image} alt="" /> */}
+                         
                           <Image
                             src={cmsFileUrl(val.image, "solutions")}
                             width={645}
@@ -163,7 +131,7 @@ export default function Solutions({ result }) {
                   <Link href={site_content.link1_url} className="site_btn">
                     <span>
                       <Text string={site_content.link1_text} />
-                    </span>{" "}
+                    </span>
                     <img src="/images/circle-arrow-right.svg" alt="" />
                   </Link>
                   <Link
@@ -172,7 +140,7 @@ export default function Solutions({ result }) {
                   >
                     <span>
                       <Text string={site_content.link2_text} />
-                    </span>{" "}
+                    </span>
                     <img src="/images/circle-arrow-right.svg" alt="" />
                   </Link>
                 </div>

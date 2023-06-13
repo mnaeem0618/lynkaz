@@ -50,7 +50,7 @@ export default function About({ result }) {
             <div className="flex">
               <div className="colL">
                 <div className="image">
-                  {/* <img src="images/abt_new.png" alt="" /> */}
+               
                   <Image
                     src={cmsFileUrl(site_content.image1)}
                     width={510}
@@ -73,7 +73,7 @@ export default function About({ result }) {
                   >
                     <span>
                       <Text string={site_content.section1_link_text} />
-                    </span>{" "}
+                    </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
                 </div>
@@ -144,98 +144,7 @@ export default function About({ result }) {
             </div>
           </div>
         </section>
-        {/* <section className="big_img_sec">
-            <div className="contain">
-                <div className="highlight_blk">
-                    <div className="image">
-                        <img src="images/big_img.png" alt="" />
-                    </div>
-                    <div className="cntnt text-center">
-                        <div className="sec_heading">
-                            <h2>Good Ideas Flexibility & Precission</h2>
-                            <p>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration exercitation</p>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <h3>Graphical Representation</h3>
-                            <p>Etiam id euismod odio. Ut euismod sem a lacus fringilla.</p>
-                        </li>
-                        <li>
-                            <h3>Storage Space Optimization</h3>
-                            <p>Etiam id euismod odio. Ut euismod sem a lacus fringilla.</p>
-                        </li>
-                        <li>
-                            <h3>We Create Experiences</h3>
-                            <p>Etiam id euismod odio. Ut euismod sem a lacus fringilla.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section className="team_sec">
-            <div className="contain">
-                <div className="sec_heading">
-                    <h2>Better Team Makes Innovative Result</h2>
-                </div>
-                <div className="flex">
-                    <div className="team_col">
-                        <div className="inner">
-                            <h4>Ralph H. Harvey</h4>
-                            <p>Chief Executive Officer</p>
-                            <div className="image">
-                                <img src="images/team1.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="team_col">
-                        <div className="inner">
-                            <h4>Diane R. Miller</h4>
-                            <p>Chief Financial & Operating Officer</p>
-                            <div className="image">
-                                <img src="images/team2.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="team_col">
-                        <div className="inner">
-                            <h4>Roger A. Greene</h4>
-                            <p>Chief Revenue Officer</p>
-                            <div className="image">
-                                <img src="images/team3.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="team_col">
-                        <div className="inner">
-                            <h4>James C. Lehmann</h4>
-                            <p>Chief Technology Officer</p>
-                            <div className="image">
-                                <img src="images/team4.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="team_col">
-                        <div className="inner">
-                            <h4>Diane R. Miller</h4>
-                            <p>Chief Financial & Operating Officer</p>
-                            <div className="image">
-                                <img src="images/team5.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="team_col">
-                        <div className="inner">
-                            <h4>Roger A. Greene</h4>
-                            <p>Chief Revenue Officer</p>
-                            <div className="image">
-                                <img src="images/team6.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> */}
+        
         <section className="cta_sec">
           <div className="contain">
             <div className="cntnt text-center">
@@ -250,13 +159,13 @@ export default function About({ result }) {
                 <Link href={site_content.link1_url} className="site_btn">
                   <span>
                     <Text string={site_content.link1_text} />
-                  </span>{" "}
+                  </span>
                   <img src="images/circle-arrow-right.svg" alt="" />
                 </Link>
                 <Link href={site_content.link2_url} className="site_btn color">
                   <span>
                     <Text string={site_content.link2_text} />
-                  </span>{" "}
+                  </span>
                   <img src="images/circle-arrow-right.svg" alt="" />
                 </Link>
               </div>

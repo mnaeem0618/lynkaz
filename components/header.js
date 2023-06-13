@@ -7,7 +7,7 @@ import Image from "next/image";
 import { cmsFileUrl } from "@/helpers/helper";
 
 export default function Header({ siteSettings }) {
-  // console.log(siteSettings);
+
 
   const router = useRouter();
   const path = router.pathname;
@@ -82,16 +82,7 @@ export default function Header({ siteSettings }) {
                   );
                 })}
 
-                {/* <li><Link href="/features/purchase-requisition"><span><img src="/images/icons/icon1.svg" alt="" /></span><span>Purchase requisition<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/contract-management"><span><img src="/images/icons/icon5.svg" alt="" /></span><span>Contract management<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/survey-and-questionnaire"><span><img src="/images/icons/icon18.svg" alt="" /></span><span>Survey and Questionnaire<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/rfx-management-rfi-rfp-rfq"><span><img src="/images/icons/icon4.svg" alt="" /></span><span>RFx management (RFI, RFP, RFQ)<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/workflow"><span><img src="/images/icons/icon17.svg" alt="" /></span><span>Workflow<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/budget"><span><img src="/images/icons/icon8.svg" alt="" /></span><span>Budget management<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/vendor-invoice"><span><img src="/images/icons/icon9.svg" alt="" /></span><span>Vendor Invoice<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/mobile"><span><img src="/images/icons/icon10.svg" alt="" /></span><span>Mobile application<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/features/vendor-portal"><span><img src="/images/icons/icon11.svg" alt="" /></span><span>Vendor portal<em>Cross reference and verify accounts payable expenses</em></span></Link></li> */}
-              </ul>
+                </ul>
             </li>
             <li className="drop">
               <Link href="/">
@@ -121,11 +112,7 @@ export default function Header({ siteSettings }) {
                   );
                 })}
 
-                {/* <li><Link href="/solutions/procure-to-pay"><span><img src="/images/icons/icon1.svg" alt="" /></span><span>Procure-to-Pay<em>Team can create a purchase request in minutes</em></span></Link></li>
-                  <li><Link href="/solutions/end-to-end-spend-management"><span><img src="/images/icons/icon2.svg" alt="" /></span><span>End-to-end spend management<em>Set unique custom fields to suit your business</em></span></Link></li>
-                  <li><Link href="/solutions/strategic-sourcing"><span><img src="/images/icons/icon3.svg" alt="" /></span><span>Strategic Sourcing<em>Cross reference and verify accounts payable expenses</em></span></Link></li>
-                  <li><Link href="/solutions/shared-service-procurement"><span><img src="/images/icons/icon4.svg" alt="" /></span><span>Shared Service Procurement<em>Cross reference and verify accounts payable expenses</em></span></Link></li> */}
-              </ul>
+                 </ul>
             </li>
 
             <li>

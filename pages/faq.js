@@ -35,7 +35,7 @@ export default function Faq({ result }) {
           onComplete: () => setOpenAccordion(null),
         }
       );
-      // console.log(openAccordion);
+     
     } else {
       if (openAccordion !== null) {
         gsap.to(
@@ -134,7 +134,7 @@ export default function Faq({ result }) {
                       href={`/${site_content.section1_link_url}`}
                       className="site_btn color"
                     >
-                      <span>{site_content.section1_link_text}</span>{" "}
+                      <span>{site_content.section1_link_text}</span>
                       <img src="images/circle-arrow-right.svg" alt="" />
                     </Link>
                   </div>

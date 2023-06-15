@@ -60,7 +60,7 @@ export default function Index({ result }) {
                 <div className="image">
                 
 
-                  <Image_video file_name={site_content.file1} />
+                  <Image_video mp4_file_name={site_content.file1} webm_file_name={site_content.file2} />
                 
                 </div>
               </div>

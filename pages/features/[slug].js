@@ -64,7 +64,7 @@ export default function features({ result }) {
                   <div className="image">
                    
 
-                    <Image_video file_name={feature.file} file_loc='features' poster={meta_tags.thumbnail} />
+                    <Image_video mp4_file_name={feature.file} webm_file_name={feature.file_webm} file_loc='features' poster={meta_tags.thumbnail} />
                   
 
                    

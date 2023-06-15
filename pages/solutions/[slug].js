@@ -58,7 +58,7 @@ export default function Solutions({ result }) {
                   <Shape />
                   <div className="image">
                   
-                    <Image_video file_name={solution.file} file_loc='solutions' poster={meta_tags.thumbnail} />
+                    <Image_video mp4_file_name={solution.file} webm_file_name={solution.file_webm} file_loc='solutions' poster={meta_tags.thumbnail} />
                    
                   </div>
                 </div>

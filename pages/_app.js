@@ -25,7 +25,7 @@ export default function App({ Component, pageProps, siteSettings }) {
         <>
           <ToastContainer />
           <NextNProgress color="#fc5e24" />
-          <Layout siteSettings={siteSettings}>{page}</Layout>;
+          <Layout siteSettings={siteSettings}>{page}</Layout>
 
           <TawkMessengerReact
                 propertyId={siteSettings.site_settings.site_tawk_property_id}

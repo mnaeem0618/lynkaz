@@ -8319,4 +8319,15 @@ table .table_name_flex span {
     padding-left: 0;
     margin-top: 7rem;
   }
-}/*# sourceMappingURL=custom.css.map */
+}
+ul{
+  &.no_sub{
+    li{
+      .sub{
+        visibility: hidden!important;
+        opacity: 0!important;
+        pointer-events: none!important;
+      }
+    }
+  }
+}

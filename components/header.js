@@ -30,6 +30,11 @@ export default function Header({ siteSettings }) {
     setFeatures(!features);
   };
 
+  const[sub , setSub]=useState(false);
+    const HideBar = () =>{
+      setSub(true);
+      console.log("ok");
+    }
  
   return (
     <header className={scroll || path != "/" ? "fix" : ""}>
@@ -51,7 +56,7 @@ export default function Header({ siteSettings }) {
           <span></span>
         </div>
         <nav id="nav" className={toggle ? "active" : ""}>
-          <ul>
+          <ul  className={sub ? "no_sub" : ""}>
             
 
             <li className="drop">
@@ -62,7 +67,7 @@ export default function Header({ siteSettings }) {
                 {siteSettings.features.map((feature) => {
                   return (
                     <li key={feature.id}>
-                      <Link href={`/features/${feature.slug}`}>
+                      <Link href={`/features/${feature.slug}`} onClick={HideBar}>
                         <span>
                           <Image
                             src={cmsFileUrl(feature.icon, "features")}

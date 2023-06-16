@@ -45,7 +45,7 @@ export default function About({ result }) {
             </div>
           </div>
         </section>
-        <section className="abt_second_sec">
+        <section className="abt_second_sec change_img">
           <div className="contain">
             <div className="flex">
               <div className="colL">

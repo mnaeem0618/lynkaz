@@ -840,6 +840,21 @@
       }
     }
   }
+  &.change_img{
+    .flex{
+      .colL{
+        padding-left: 4rem;
+        .image{
+          padding-bottom: 140%;
+          @include radius(8px);
+          img{
+            object-fit: contain;
+            object-position: bottom;
+          }
+        }
+      }
+    }
+  }
 }
 // =================abt_counter_sec============
 .abt_counter_sec{

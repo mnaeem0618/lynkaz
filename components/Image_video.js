@@ -14,7 +14,7 @@ export default function Image_video({mp4_file_name, webm_file_name, file_loc='im
 
     return (
         <>
-            {ext == "mp4" || ext == "webm" || ext_webm == "webm" ? (
+            {ext == "mp4" || ext == "webm" || ext == "mov" ? (
                     <video
                       className="CuAnimation_video__70Pvw"
                       height="1224"

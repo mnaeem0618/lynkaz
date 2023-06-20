@@ -268,12 +268,16 @@ export default function Index({ result }) {
                           <div className="colR">
                             <div className="image">
                              
-                              <Image
+                              {/* <Image
                                 src={cmsFileUrl(val.image)}
                                 width={585}
                                 height={468}
                                 alt={val.title}
-                              />
+                              /> */}
+
+                              <Image_video mp4_file_name={val.image} webm_file_name={val.image} img_width="585" img_height="468" vid_width="585" vid_height="468"/>
+
+
                             </div>
                           </div>
                         </motion.div>

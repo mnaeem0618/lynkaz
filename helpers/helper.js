@@ -9,8 +9,13 @@ export function doParseHTML(string) {
 
 export function getFileExtension(file_name) {
   let fileName = file_name;
-  let extension = fileName.split(".").pop();
+  if(fileName){
+    let extension = fileName.split(".").pop();
   return extension;
+  }else{
+    return false;
+  }
+  
 }
 export function doObjToFormData(obj) {
   var formData = new FormData();

@@ -50,7 +50,6 @@ export default function About({ result }) {
             <div className="flex">
               <div className="colL">
                 <div className="image">
-               
                   <Image
                     src={cmsFileUrl(site_content.image1)}
                     width={510}
@@ -144,7 +143,38 @@ export default function About({ result }) {
             </div>
           </div>
         </section>
-        
+
+      {site_content.section4_status == 0 ? '' :
+        <section className="new_about_me">
+          <div className="contain">
+            <div className="flex">
+              <div className="colL">
+                <div className="image">
+                  <Image
+                    src={cmsFileUrl(site_content.image3)}
+                    width={486}
+                    height={400}
+                    alt="about-image3"
+                  />
+                </div>
+                <div className="dots_image">
+                  <img src="images/dots.png" alt="" />
+                </div>
+              </div>
+              <div className="colR">
+                <div className="sec_heading">
+                  <h2>
+                    <Text string={site_content.section4_heading} />
+                  </h2>
+                </div>
+                <Text string={site_content.section4_detail} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+      }
+
         <section className="cta_sec">
           <div className="contain">
             <div className="cntnt text-center">

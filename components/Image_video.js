@@ -9,7 +9,14 @@ import { cmsFileUrl, getFileExtension } from "@/helpers/helper";
 export default function Image_video({mp4_file_name, webm_file_name, file_loc='images', poster, img_width = '670',img_height = '447', vid_width = '1880',vid_height = '1224' }){
 
     let ext = getFileExtension(mp4_file_name);
+    const expression = /(Mac|iPhone|iPod|iPad)/i;
 
+    const [platform, setPlatform] = useState();
+    useEffect(() => {
+
+      console.log(navigator.platform);
+      setPlatform(navigator.platform)
+    });
 
 
     return (
@@ -27,16 +34,22 @@ export default function Image_video({mp4_file_name, webm_file_name, file_loc='im
                       preload="auto"
                     >
 
-                        <source
-                        type="video/webm"
-                        src={cmsFileUrl(webm_file_name, file_loc)}
-                        data-src={cmsFileUrl(webm_file_name, file_loc)}
-                      />
-                      <source
+
+{ (expression.test(platform)) ? 
+
+
+  <source
                         type="video/mp4"
                         src={cmsFileUrl(mp4_file_name, file_loc)}
                         data-src={cmsFileUrl(mp4_file_name, file_loc)}
                       />
+                      : 
+                      <source
+                        type="video/webm"
+                        src={cmsFileUrl(webm_file_name, file_loc)}
+                        data-src={cmsFileUrl(webm_file_name, file_loc)}
+                      /> 
+                     }
 
                       
 

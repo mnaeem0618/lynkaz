@@ -528,6 +528,10 @@
         @include pos;
         @include object(contain);
       }
+      video{
+        @include pos;
+        @include object(contain);
+      }
     }
     &:after{
       @include pos;

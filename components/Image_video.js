@@ -27,11 +27,11 @@ export default function Image_video({mp4_file_name, webm_file_name, file_loc='im
                       preload="auto"
                     >
 
-<source
+{/* <source
                         type="video/mp4"
                         src={cmsFileUrl(mp4_file_name, file_loc)}
                         data-src={cmsFileUrl(mp4_file_name, file_loc)}
-                      />
+                      /> */}
 
                       <source
                         type="video/webm"

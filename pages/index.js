@@ -275,8 +275,8 @@ export default function Index({ result }) {
                                 alt={val.title}
                               /> */}
 
-                              <Image_video mp4_file_name={val.image} webm_file_name={val.image} img_width="585" img_height="468" vid_width="585" vid_height="468"/>
-
+                              {/* <Image_video mp4_file_name={val.image} webm_file_name={val.image} img_width="585" img_height="468" vid_width="585" vid_height="468"/> */}
+                              <Image_video mp4_file_name={site_content.file1} webm_file_name={site_content.file2} />
 
                             </div>
                           </div>

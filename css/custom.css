@@ -6541,6 +6541,23 @@ table .table_name_flex span {
     width: 100%;
   }
 }
+.abt_second_sec.change_img .flex .colL {
+  padding-left: 4rem;
+}
+.abt_second_sec.change_img .flex .colL .image {
+  padding-bottom: 140%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.abt_second_sec.change_img .flex .colL .image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
 
 .abt_counter_sec {
   padding-top: 0;
@@ -8319,15 +8336,4 @@ table .table_name_flex span {
     padding-left: 0;
     margin-top: 7rem;
   }
-}
-ul{
-  &.no_sub{
-    li{
-      .sub{
-        visibility: hidden!important;
-        opacity: 0!important;
-        pointer-events: none!important;
-      }
-    }
-  }
-}
+}/*# sourceMappingURL=custom.css.map */

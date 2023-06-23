@@ -4908,4 +4908,20 @@ table{
     }
   }
 }
+
+
+ul{
+  &.no_sub{
+    li{
+      .sub{
+        visibility: hidden!important;
+        opacity: 0!important;
+        pointer-events: none!important;
+      }
+    }
+  }
+}
+
+
+
 @import "style.module";

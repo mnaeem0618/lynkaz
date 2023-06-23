@@ -38,6 +38,11 @@ export default function Header({ siteSettings }) {
       console.log("ok");
     }
 
+    const ShowBar = () =>{
+      setSub(false);
+      console.log("ok");
+    }
+
     const [device, setDevice] = useState();
 
     
@@ -58,10 +63,10 @@ export default function Header({ siteSettings }) {
 
       }else{
         console.log('desktop');
-
+        HideBar();
+       
       }
-      // console.log(menu + toggle);
-      // Add other logic or navigation code here if needed
+      
     };
   
 
@@ -92,7 +97,7 @@ export default function Header({ siteSettings }) {
             
 
             <li className="drop">
-              <Link href="/">
+              <Link href="" onMouseEnter={ShowBar}>
                 Features
               </Link>
               <ul className={features ? "sub active" : "sub"}>
@@ -122,7 +127,7 @@ export default function Header({ siteSettings }) {
                 </ul>
             </li>
             <li className="drop">
-              <Link href="/">
+              <Link href="" onMouseEnter={ShowBar}>
                 Solutions
               </Link>
               <ul className={solutions ? "sub active" : "sub"}>

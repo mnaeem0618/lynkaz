@@ -24,10 +24,9 @@ export default function Image_video({
     setPlatform(navigator.platform);
   });
 
-  useEffect(() => {    
+  useEffect(() => {
     videoRef.current?.load();
   }, [mp4_file_name, webm_file_name]);
-
 
   return (
     <>
@@ -40,7 +39,7 @@ export default function Image_video({
           muted={true}
           loop={true}
           playsInline={true}
-          poster={poster}
+          // poster={poster}
           preload="auto"
           ref={videoRef}
         >
@@ -57,8 +56,6 @@ export default function Image_video({
               // data-src={cmsFileUrl(webm_file_name, file_loc)}
             />
           )}
-
-      
         </video>
       ) : (
         <Image

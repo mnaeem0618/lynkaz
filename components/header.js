@@ -22,6 +22,8 @@ export default function Header({ siteSettings }) {
   const [features, setFeatures] = useState(false);
   const ToggleAction = () => {
     setToggle(!toggle);
+
+
   };
   const ToggleSolutions = () => {
     setSolutions(!solutions);
@@ -35,6 +37,35 @@ export default function Header({ siteSettings }) {
       setSub(true);
       console.log("ok");
     }
+
+    const [device, setDevice] = useState();
+
+    
+
+
+    const expression = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+
+    useEffect(() => {
+      setDevice(navigator.userAgent);
+    });
+
+    const handleClickLink = () => {
+      if (expression.test(device)) {
+
+        ToggleAction();
+            
+        console.log(device);
+
+      }else{
+        console.log('desktop');
+
+      }
+      // console.log(menu + toggle);
+      // Add other logic or navigation code here if needed
+    };
+  
+
+
  
   return (
     <header className={scroll || path != "/" ? "fix" : ""}>
@@ -50,12 +81,13 @@ export default function Header({ siteSettings }) {
           </Link>
         </div>
         <div
-          className={toggle ? "toggle active" : "toggle"}
+          className={toggle ? "toggle active": "toggle"}
           onClick={ToggleAction}
+          id="tog_btn"
         >
           <span></span>
         </div>
-        <nav id="nav" className={toggle ? "active" : ""}>
+        <nav id="nav" className={toggle ? 'active': ""}>
           <ul  className={sub ? "no_sub" : ""}>
             
 
@@ -67,7 +99,7 @@ export default function Header({ siteSettings }) {
                 {siteSettings.features.map((feature) => {
                   return (
                     <li key={feature.id}>
-                      <Link href={`/features/${feature.slug}`} onClick={HideBar}>
+                      <Link href={`/features/${feature.slug}`} onClick={handleClickLink}>
                         <span>
                           <Image
                             src={cmsFileUrl(feature.icon, "features")}
@@ -97,7 +129,7 @@ export default function Header({ siteSettings }) {
                 {siteSettings.solutions.map((sol) => {
                   return (
                     <li key={sol.id}>
-                      <Link href={`/solutions/${sol.slug}`}>
+                      <Link href={`/solutions/${sol.slug}`} onClick={handleClickLink}>
                         <span>
                           <Image
                             src={cmsFileUrl(sol.icon, "solutions")}
@@ -121,21 +153,21 @@ export default function Header({ siteSettings }) {
             </li>
 
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/about" onClick={handleClickLink}>About Us</Link>
             </li>
 
             <li className="hide_navigation_lnk_desktop">
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact" onClick={handleClickLink}>Contact Us</Link>
             </li>
           </ul>
         </nav>
         <div className="login_btns">
           <ul>
             <li className="hide_navigation_lnk_mobile">
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact" onClick={handleClickLink}>Contact Us</Link>
             </li>
             <li className="btn_blk">
-              <Link href="/login" className="site_btn">
+              <Link href="/login" className="site_btn" onClick={handleClickLink}>
                 Login
               </Link>
             </li>

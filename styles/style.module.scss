@@ -2229,6 +2229,10 @@ ul{
     max-width: 70rem;
     margin: 0 auto;
     column-gap: 2rem;
+    @include mobile_sm{
+      flex-flow: column;
+      row-gap: 2rem;
+    }
     li{
       @include radius(15px);
       padding: 1.5rem;
@@ -2270,6 +2274,9 @@ ul{
       @include radius(15px);
       padding: 5rem;
       display: none;
+      @include mobile_sm{
+        padding: 3rem;
+      }
       &.active{
         display: block;
       }

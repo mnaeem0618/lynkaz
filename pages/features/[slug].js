@@ -156,7 +156,7 @@ export default function features({ result }) {
                     <Text string={site_content.last_section_heading} />
                   </h2>
                 </div>
-                <Text string={site_content.last_section_detail} />
+                {/* <Text string={site_content.last_section_detail} /> */}
 
                 <div className="btn_blk text-center">
                   <Link href={site_content.link1_url} className="site_btn">

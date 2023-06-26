@@ -220,8 +220,7 @@ export default function Footer({ siteSettings }) {
       </div>
       <div className="copyright">
         <p className="text-center">
-          Copyright © {new Date().getFullYear()} By
-          <Link href="/" className="regular" style={{ fontWeight: "bold" }}>
+          Copyright © {new Date().getFullYear()} By <Link href="/" className="regular" style={{ fontWeight: "bold" }}>
             <Text string={siteSettings.site_settings.site_name} />
           </Link>
           . <Text string={siteSettings.site_settings.site_copyright} />

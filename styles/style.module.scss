@@ -1900,7 +1900,7 @@
     }
     .colR{
       width: 50%;
-      padding-left: 5rem;
+      padding-left: 2rem;
       position: relative;
       .shape_bg{
         display: none;
@@ -1924,12 +1924,17 @@
         padding-left: 0;
       }
       .image{
-        @include img(60%);
+        @include img(71%);
+        width: 66rem;
         @include radius(12);
         box-shadow: none;
         background-color: transparent;
-        filter: drop-shadow(0px 3.72222px 46.5278px rgba(35, 41, 214, 0.13));
+        // filter: drop-shadow(0px 3.72222px 46.5278px rgba(35, 41, 214, 0.13));
         z-index: 2;
+        @include ipad{
+          width: 100%;
+          position: relative;
+        }
         video{
           object-fit: cover;
           inline-size: 100%;
@@ -2208,6 +2213,99 @@ ul{
         opacity: 0!important;
         pointer-events: none!important;
       }
+    }
+  }
+}
+// ==============pricing page==========
+.tabs_pricing_sec{
+  padding-top: 0;
+  .tabs_btns{
+    @include list;
+    border: 1.119px solid #EBEBEB;
+    background: #FFF;
+    box-shadow: 0px 4.474999904632568px 33.5625px 0px rgba(0, 0, 0, 0.08);
+    @include radius(15px);
+    padding: 3rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    column-gap: 2rem;
+    li{
+      @include radius(15px);
+      padding: 1.5rem;
+      text-align: center;
+      background: #F3F3F3;
+      color: $black;
+      flex: 1;
+      @include trans;
+      cursor: pointer;
+      p{
+        margin-bottom: 0;
+        color: $color;
+        @include trans;
+      }
+      h2{
+        @include trans;
+      }
+      &:hover , &.active{
+        @include trans;
+        background: $color;
+        p{
+          @include trans;
+          color: $light;
+        }
+        h2{
+          @include trans;
+          color: $light;
+        }
+      }
+    }
+  }
+  .pricing_content{
+    max-width: 90rem;
+    margin: 4rem auto 0;
+    .content_inner{
+      border: 1px solid #DFDFDF;
+      background: #FFF;
+      box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.16);
+      @include radius(15px);
+      padding: 5rem;
+      display: none;
+      &.active{
+        display: block;
+      }
+      ul{
+        @include list;
+        margin-top: 2rem;
+        li{
+          padding-bottom:1.2rem;
+          position: relative;
+          padding-left: 3.2rem;
+          &:before{
+            @include pos($r:null,$t:0);
+            content: '';
+            width: 2.5rem;
+            height: 2.5rem;
+            background-image: url(/images/Checks.svg);
+            @include bg(contain);
+          }
+        }
+      }
+      .btn_blk{
+        margin-top: 3rem;
+        .site_btn{
+          justify-content: center;
+          flex: 1;
+          &.black{
+            background-color: $black;
+            border-color: $black;
+            &:hover{
+              background-color: $color;
+              border-color: $color;
+            }
+          }
+        }
+      }
+      
     }
   }
 }

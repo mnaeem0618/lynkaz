@@ -158,6 +158,10 @@ export default function Header({ siteSettings }) {
             </li>
 
             <li>
+              <Link href="/pricing" onClick={handleClickLink}>Pricing</Link>
+            </li>
+
+            <li>
               <Link href="/about" onClick={handleClickLink}>About Us</Link>
             </li>
 

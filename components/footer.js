@@ -72,6 +72,11 @@ export default function Footer({ siteSettings }) {
         text: "Faq's",
         link: "/faq",
       },
+      {
+        id: 4,
+        text: "Pricing",
+        link: "/pricing",
+      },
     ],
     list_03: [
       {

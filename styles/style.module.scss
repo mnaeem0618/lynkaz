@@ -2226,7 +2226,7 @@ ul{
     box-shadow: 0px 4.474999904632568px 33.5625px 0px rgba(0, 0, 0, 0.08);
     @include radius(15px);
     padding: 3rem;
-    max-width: 70rem;
+    max-width: 78rem;
     margin: 0 auto;
     column-gap: 2rem;
     @include mobile_sm{
@@ -2249,6 +2249,23 @@ ul{
       }
       h2{
         @include trans;
+      }
+      &:first-child{
+        position: relative;
+        overflow: hidden;
+        span{
+          position: absolute;
+          left: -24px;
+          background-color: $light;
+          width: -moz-fit-content;
+          width: fit-content;
+          margin: 0rem auto 0;
+          padding: 0.2rem 2rem;
+          font-size: 1.2rem;
+          color: $color;
+          transform: rotate(324deg);
+          top: 1.6rem;
+        }
       }
       &:hover , &.active{
         @include trans;
@@ -2308,6 +2325,16 @@ ul{
             &:hover{
               background-color: $color;
               border-color: $color;
+            }
+          }
+        }
+        &.first_btn_blk_pricing{
+          justify-content: center;
+          .site_btn{
+            flex: unset;
+            min-width: 35rem;
+            @include mobile_md{
+              min-width: 100%;
             }
           }
         }

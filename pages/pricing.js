@@ -25,7 +25,7 @@ export default function Pricing() {
         <section className="tabs_pricing_sec">
             <div className="contain">
                 <ul className="tabs_btns flex">
-                    <li onClick={() => setOpenTab(1)} className={openTab === 1 ? "active" : ""}><h2>Vendor Portal</h2><p>(Standalone Version)</p></li> 
+                    <li onClick={() => setOpenTab(1)} className={openTab === 1 ? "active" : ""}><h2>Vendor Portal</h2><p>(Standalone Version)</p><span>Demo Available</span></li> 
                     <li onClick={() => setOpenTab(2)} className={openTab === 2 ? "active" : ""}><h2>Lynkaz Pro</h2><p>(Integrated Business Suite)</p></li>  
                 </ul>
                 <div className="pricing_content">
@@ -46,9 +46,9 @@ export default function Pricing() {
                             <li><strong>Mobile Application:</strong> Access all these functionalities on the go with the Lynkaz mobile app.</li>
                         </ul>
                         
-                        <div className="btn_blk">
-                            <button type="button" className="site_btn">Book Now</button>
-                            <button type="button" className="site_btn black">Start your free trial</button>
+                        <div className="btn_blk first_btn_blk_pricing">
+                            {/* <button type="button" className="site_btn">Book Now</button> */}
+                            <button type="button" className="site_btn">Start your free trial</button>
                         </div>
                     </div>
                     <div className={openTab === 2 ? "content_inner active" : "content_inner"}>

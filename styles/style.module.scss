@@ -2343,3 +2343,35 @@ ul{
     }
   }
 }
+.grid_flex_slider_carousel{
+  .owl-stage-outer{
+    padding: 1rem 0;
+    .site_btn{
+      img{
+        width: auto!important;
+      }
+    }
+  }
+  .owl-nav{
+    position: relative!important;
+    top: unset!important;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    .owl-prev , .owl-next{
+      position: relative!important;
+      width: 4rem!important;
+      height: 4rem!important;
+      img{
+        width: 2.3rem!important;
+        height: 2.3rem!important;
+      }
+    }
+    .owl-prev{
+      left: unset!important;
+    }
+    .owl-next{
+      right: unset!important;
+    }
+  }
+}

@@ -6,7 +6,10 @@ import Text from "@/components/text";
 import Image from "next/image";
 import { cmsFileUrl, getFileExtension } from "@/helpers/helper";
 import Image_video from "@/components/Image_video";
-
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
+const OwlCarousel = dynamic(import("react-owl-carousel"), {ssr: false});
 import http from "../helpers/http";
 import MetaGenerator from "@/components/meta-generator";
 
@@ -20,6 +23,34 @@ export const getServerSideProps = async () => {
 };
 
 export default function Index({ result }) {
+  const option = {
+    margin: 15,
+    loop: true,
+    dots: false,
+    nav: true,
+    navText: ['<img src="images/left-angle.svg" />','<img src="images/right-angle.svg" />'],
+    smartSpeed: 1000,
+    center:true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      580: {
+        items: 1
+      },
+      991: {
+        items: 1
+      },
+      1200: {
+        items: 1
+      },
+      1600: {
+        items: 1
+      }
+    }
+    
+  };
   const { meta_tags, site_content, home_features } = result;
 
  
@@ -141,6 +172,10 @@ export default function Index({ result }) {
               </h3>
               <Text string={site_content.section1_detail} />
             </div>
+            <OwlCarousel
+                className="owl-carousel owl-theme grid_flex_slider_carousel"
+                {...option}
+              >
             <div className="flex grid_flex">
               <div className="colL">
                 <div className="image">
@@ -175,6 +210,42 @@ export default function Index({ result }) {
                 </div>
               </div>
             </div>
+            <div className="flex grid_flex">
+              <div className="colL">
+                <div className="image">
+                 
+                  <Image
+                    src={cmsFileUrl(site_content.image5)}
+                    width={742}
+                    height={519}
+                    alt="Expirence Image"
+                  />
+                </div>
+              </div>
+              <div className="colR">
+                <div className="sec_heading">
+                  <h2>
+                    <Text string={site_content.section2_heading} />
+                  </h2>
+                </div>
+
+                <Text string={site_content.section2_detail} />
+
+                <div className="btn_blk">
+                  <Link
+                    href={site_content.section2_link_url}
+                    className="site_btn"
+                  >
+                    <span>
+                      <Text string={site_content.section2_link_text} />
+                    </span>
+                    <img src="images/circle-arrow-right.svg" alt="" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            </OwlCarousel>
           </div>
         </section>
         <section className="tabs_sec">

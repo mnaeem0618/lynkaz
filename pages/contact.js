@@ -23,10 +23,13 @@ export default function Contact({ result }) {
   const { meta_tags, site_content, site_settings } = result;
 
   const [form, setForm] = React.useState({
+    what_to_do: "",
     name: "",
     company_name: "",
     phone: "",
     email: "",
+    country: "",
+
     msg: "",
   });
 
@@ -44,8 +47,6 @@ export default function Contact({ result }) {
 
     setLoading(true);
 
-    
-
     const result = await http
       .post("save_contact", doObjToFormData(form))
       .then((response) => {
@@ -53,10 +54,13 @@ export default function Contact({ result }) {
           toast.success(<Text string={response.data.msg} />, TOAST_SETTINGS);
           setLoading(false);
           setForm({
+            what_to_do: "",
             name: "",
             company_name: "",
             phone: "",
             email: "",
+            country: "",
+
             msg: "",
           });
         } else {
@@ -71,8 +75,6 @@ export default function Contact({ result }) {
       })
 
       .catch((error) => error.response.data.message);
-
-   
   }
   return (
     <>
@@ -104,7 +106,6 @@ export default function Contact({ result }) {
                   <h3>
                     <Text string={site_content.side_heading} />
                   </h3>
-                  
 
                   <Text string={site_content.side_detail} />
 
@@ -193,6 +194,23 @@ export default function Contact({ result }) {
                     </h3>
                     <form onSubmit={handleSubmit} method="POST">
                       <div className="form_blk">
+                        <select
+                          name="what_to_do"
+                          id="frm-tod"
+                          className="input"
+                          value={form.what_to_do}
+                          required
+                          onChange={handleChange}
+                        >
+                          <option value="">What would you like to do</option>
+
+                          <option value="option1">OPtion 1</option>
+                          <option value="option2">OPtion 2</option>
+                          <option value="option3">OPtion 3</option>
+                        </select>
+                      </div>
+
+                      <div className="form_blk">
                         <input
                           id="frm-name"
                           type="text"
@@ -244,6 +262,21 @@ export default function Contact({ result }) {
                           required
                         />
                       </div>
+
+                      <div className="form_blk">
+                        <input
+                          id="frm-country"
+                          type="text"
+                          name="country"
+                          value={form.country}
+                          onChange={handleChange}
+                          autoComplete="country"
+                          placeholder="Country"
+                          className="input"
+                          required
+                        />
+                      </div>
+
                       <div className="form_blk">
                         <textarea
                           id="frm-message"

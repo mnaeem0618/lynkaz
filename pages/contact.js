@@ -209,20 +209,39 @@ export default function Contact({ result }) {
                           <option value="option3">OPtion 3</option>
                         </select>
                       </div>
-
-                      <div className="form_blk">
-                        <input
-                          id="frm-name"
-                          type="text"
-                          name="name"
-                          value={form.name}
-                          onChange={handleChange}
-                          autoComplete="name"
-                          placeholder="Full Name"
-                          className="input"
-                          required
-                        />
-                      </div>
+                        <div className="flex contact_new_flex">
+                          <div className="col">
+                            <div className="form_blk">
+                              <input
+                                id="frm-name"
+                                type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleChange}
+                                autoComplete="name"
+                                placeholder="First Name"
+                                className="input"
+                                required
+                              />
+                            </div>
+                          </div>
+                          <div className="col">
+                            <div className="form_blk">
+                              <input
+                                id="last-name"
+                                type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleChange}
+                                autoComplete="name"
+                                placeholder="Last Name"
+                                className="input"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      
                       <div className="form_blk">
                         <input
                           id="frm-cname"
@@ -257,7 +276,7 @@ export default function Contact({ result }) {
                           value={form.email}
                           onChange={handleChange}
                           autoComplete="email"
-                          placeholder="Email Address"
+                          placeholder="Work Email"
                           className="input"
                           required
                         />
@@ -277,7 +296,7 @@ export default function Contact({ result }) {
                         />
                       </div>
 
-                      <div className="form_blk">
+                      {/* <div className="form_blk">
                         <textarea
                           id="frm-message"
                           name="msg"
@@ -287,7 +306,7 @@ export default function Contact({ result }) {
                           placeholder="Enter Your Message Here"
                           required
                         ></textarea>
-                      </div>
+                      </div> */}
                       <div className="btn_blk">
                         <button
                           type="submit"

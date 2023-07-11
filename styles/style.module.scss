@@ -327,6 +327,27 @@
       }
     }
   }
+  &.grid_flex_reverse{
+    flex-direction: row-reverse;
+    padding: 2rem 0 8rem;
+    @include ipad{
+      padding-top: 6rem;
+    }
+    .colL{
+      padding-left: 1rem;
+      padding-right: 0;
+      @include ipad_sm{
+        padding-left: 0;
+      }
+    }
+    .colR{
+      padding-left: 0;
+      padding-right: 2rem;
+      @include ipad_sm{
+        padding-right: 0;
+      }
+    }
+  }
 }
 // =========================
 // ====tabs_blk=================
@@ -615,6 +636,7 @@
           margin-top: -4rem;
           @include ipad_sm{
             margin-top: 0;
+            display: none;
           }
           .inner{
             .head_inner{
@@ -634,7 +656,7 @@
           }
         }
         &:nth-child(3){
-          margin-top: -4rem;
+          margin-top: -13rem;
           @include ipad_sm{
             margin-top: 0;
           }
@@ -2373,5 +2395,11 @@ ul{
     .owl-next{
       right: unset!important;
     }
+  }
+}
+.contact_new_flex{
+  gap: 1rem;
+  .col{
+    margin-bottom: 1.5rem;
   }
 }

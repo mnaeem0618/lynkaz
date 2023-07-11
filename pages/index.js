@@ -172,11 +172,41 @@ export default function Index({ result }) {
               </h3>
               <Text string={site_content.section1_detail} />
             </div>
-            <OwlCarousel
-                className="owl-carousel owl-theme grid_flex_slider_carousel"
-                {...option}
-              >
             <div className="flex grid_flex">
+              <div className="colL">
+                <div className="image">
+                 
+                  <Image
+                    src={cmsFileUrl(site_content.image5)}
+                    width={742}
+                    height={519}
+                    alt="Expirence Image"
+                  />
+                </div>
+              </div>
+              <div className="colR">
+                <div className="sec_heading">
+                  <h2>
+                    <Text string={site_content.section2_heading} />
+                  </h2>
+                </div>
+
+                <Text string={site_content.section2_detail} />
+
+                <div className="btn_blk">
+                  <Link
+                    href={site_content.section2_link_url}
+                    className="site_btn"
+                  >
+                    <span>
+                      <Text string={site_content.section2_link_text} />
+                    </span>
+                    <img src="images/circle-arrow-right.svg" alt="" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="flex grid_flex grid_flex_reverse">
               <div className="colL">
                 <div className="image">
                  
@@ -244,8 +274,6 @@ export default function Index({ result }) {
                 </div>
               </div>
             </div>
-            
-            </OwlCarousel>
           </div>
         </section>
         <section className="tabs_sec">
@@ -364,7 +392,7 @@ export default function Index({ result }) {
           <div className="contain">
             <div className="flex">
               <div className="colL">
-                <div className="_col">
+                {/* <div className="_col">
                   <div className="inner">
                     <div className="head_inner">
                       <div className="icon_img">
@@ -385,7 +413,8 @@ export default function Index({ result }) {
                       <Text string={site_content.sec4_text6} />
                     </p>
                   </div>
-                </div>
+                </div> */}
+                <div className="_col"></div>
                 <div className="_col">
                   <div className="inner">
                     <div className="head_inner">

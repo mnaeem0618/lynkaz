@@ -24,13 +24,14 @@ export default function Contact({ result }) {
 
   const [form, setForm] = React.useState({
     what_to_do: "",
-    name: "",
+    fname: "",
+    lname: "",
     company_name: "",
     phone: "",
     email: "",
     country: "",
 
-    msg: "",
+    // msg: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -55,13 +56,13 @@ export default function Contact({ result }) {
           setLoading(false);
           setForm({
             what_to_do: "",
-            name: "",
+            fname: "",
+            lname: "",
             company_name: "",
             phone: "",
             email: "",
             country: "",
-
-            msg: "",
+            // msg: "",
           });
         } else {
           toast.error(
@@ -213,12 +214,12 @@ export default function Contact({ result }) {
                           <div className="col">
                             <div className="form_blk">
                               <input
-                                id="frm-name"
+                                id="frm-fname"
                                 type="text"
-                                name="name"
-                                value={form.name}
+                                name="fname"
+                                value={form.fname}
                                 onChange={handleChange}
-                                autoComplete="name"
+                                autoComplete="fname"
                                 placeholder="First Name"
                                 className="input"
                                 required
@@ -230,10 +231,10 @@ export default function Contact({ result }) {
                               <input
                                 id="last-name"
                                 type="text"
-                                name="name"
-                                value={form.name}
+                                name="lname"
+                                value={form.lname}
                                 onChange={handleChange}
-                                autoComplete="name"
+                                autoComplete="lname"
                                 placeholder="Last Name"
                                 className="input"
                                 required

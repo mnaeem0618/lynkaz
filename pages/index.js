@@ -211,7 +211,7 @@ export default function Index({ result }) {
                 <div className="image">
                  
                   <Image
-                    src={cmsFileUrl(site_content.image5)}
+                    src={cmsFileUrl(site_content.image11)}
                     width={742}
                     height={519}
                     alt="Expirence Image"
@@ -221,19 +221,19 @@ export default function Index({ result }) {
               <div className="colR">
                 <div className="sec_heading">
                   <h2>
-                    <Text string={site_content.section2_heading} />
+                    <Text string={site_content.section2_ii_heading} />
                   </h2>
                 </div>
 
-                <Text string={site_content.section2_detail} />
+                <Text string={site_content.section2_ii_detail} />
 
                 <div className="btn_blk">
                   <Link
-                    href={site_content.section2_link_url}
+                    href={site_content.section2_ii_link_url}
                     className="site_btn"
                   >
                     <span>
-                      <Text string={site_content.section2_link_text} />
+                      <Text string={site_content.section2_ii_link_text} />
                     </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
@@ -245,7 +245,7 @@ export default function Index({ result }) {
                 <div className="image">
                  
                   <Image
-                    src={cmsFileUrl(site_content.image5)}
+                    src={cmsFileUrl(site_content.image12)}
                     width={742}
                     height={519}
                     alt="Expirence Image"
@@ -255,19 +255,19 @@ export default function Index({ result }) {
               <div className="colR">
                 <div className="sec_heading">
                   <h2>
-                    <Text string={site_content.section2_heading} />
+                    <Text string={site_content.section2_iii_heading} />
                   </h2>
                 </div>
 
-                <Text string={site_content.section2_detail} />
+                <Text string={site_content.section2_iii_detail} />
 
                 <div className="btn_blk">
                   <Link
-                    href={site_content.section2_link_url}
+                    href={site_content.section2_iii_link_url}
                     className="site_btn"
                   >
                     <span>
-                      <Text string={site_content.section2_link_text} />
+                      <Text string={site_content.section2_iii_link_text} />
                     </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>

@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
 };
 
 export default function Contact({ result }) {
-  const { meta_tags, site_content, site_settings } = result;
+  const { meta_tags, site_content, site_settings, countries } = result;
 
   const [form, setForm] = React.useState({
     what_to_do: "",
@@ -205,9 +205,9 @@ export default function Contact({ result }) {
                         >
                           <option value="">What would you like to do</option>
 
-                          <option value="option1">OPtion 1</option>
-                          <option value="option2">OPtion 2</option>
-                          <option value="option3">OPtion 3</option>
+                          <option value="Talk to a sale representative">Talk to a sale representative.</option>
+                          <option value="Schedule a demo with an expert">Schedule a demo with an expert.</option>
+                          <option value="I have a question about something else">I have a question about something else.</option>
                         </select>
                       </div>
                         <div className="flex contact_new_flex">
@@ -284,17 +284,22 @@ export default function Contact({ result }) {
                       </div>
 
                       <div className="form_blk">
-                        <input
-                          id="frm-country"
-                          type="text"
+                        <select
                           name="country"
-                          value={form.country}
-                          onChange={handleChange}
-                          autoComplete="country"
-                          placeholder="Country"
+                          id="frm-country"
                           className="input"
+                          value={form.country}
                           required
-                        />
+                          onChange={handleChange}
+                        >
+                          <option value="">-- Select Country --</option>
+                          {countries.map((val, i) => {
+                            return (
+                              <option value={val.name}>{val.name}</option>
+                              )
+                          })}
+                          
+                        </select>
                       </div>
 
                       {/* <div className="form_blk">

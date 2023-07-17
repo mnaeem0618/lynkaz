@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from "next/image";
 import { cmsFileUrl, getFileExtension } from "@/helpers/helper";

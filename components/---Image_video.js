@@ -5,8 +5,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Text from "@/components/text";
 import Image from "next/image";
 import { cmsFileUrl, getFileExtension } from "@/helpers/helper";
-// import ReactPlayer from 'react-player';
-import VideoSection from "./must-video-player";
 
 export default function Image_video({
   mp4_file_name,
@@ -27,29 +25,38 @@ export default function Image_video({
   });
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-    }
+    videoRef.current?.load();
   }, [mp4_file_name, webm_file_name]);
 
   return (
     <>
       {ext == "mp4" || ext == "webm" || ext == "mov" ? (
-     
-        <>
-        <VideoSection
-          mp4_file_name={mp4_file_name}
-          file_loc={file_loc}
-          webm_file_name={webm_file_name}
-        />
-
-        <VideoSection
-          mp4_file_name={webm_file_name}
-          file_loc={file_loc}
-          webm_file_name={mp4_file_name}
-        />
-        </>
-
+        <video
+          className="CuAnimation_video__70Pvw"
+          height={vid_height}
+          width={vid_width}
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          playsInline={true}
+          // poster={poster}
+          preload="auto"
+          ref={videoRef}
+        >
+          {expression.test(platform) ? (
+            <source
+              type="video/mp4"
+              src={cmsFileUrl(mp4_file_name, file_loc)}
+              // data-src={cmsFileUrl(mp4_file_name, file_loc)}
+            />
+          ) : (
+            <source
+              type="video/webm"
+              src={cmsFileUrl(webm_file_name, file_loc)}
+              // data-src={cmsFileUrl(webm_file_name, file_loc)}
+            />
+          )}
+        </video>
       ) : (
         <Image
           src={cmsFileUrl(mp4_file_name, file_loc)}

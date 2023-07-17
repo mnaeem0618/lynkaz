@@ -16,6 +16,12 @@ const VideoSection = ({
     const videoRef = useRef(null);
     const router = useRouter();
 
+    const expression = /(Mac|iPhone|iPod|iPad)/i;
+  const [platform, setPlatform] = useState();
+  useEffect(() => {
+    setPlatform(navigator.platform);
+  });
+
     useEffect(() => {
         const handleRouteChange = () => {
             // Reset video playback state when navigating to a new page
@@ -35,6 +41,7 @@ const VideoSection = ({
 
     return (
         <div>
+        {expression.test(platform) ? (
             <video
                 ref={videoRef}
                 src={cmsFileUrl(mp4_file_name, file_loc)}
@@ -49,6 +56,21 @@ const VideoSection = ({
             // poster={poster}
             // preload="auto"
             />
+        ) : <video
+                ref={videoRef}
+                src={cmsFileUrl(webm_file_name, file_loc)}
+                className="CuAnimation_video__70Pvw"
+                id="lazy-video"
+                height={vid_height}
+                width={vid_width}
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                playsInline={true}
+            // poster={poster}
+            // preload="auto"
+            />}
+           
         </div>
     );
 };

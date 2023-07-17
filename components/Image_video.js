@@ -20,11 +20,11 @@ export default function Image_video({
 }) {
   const videoRef = useRef();
   let ext = getFileExtension(mp4_file_name);
-  const expression = /(Mac|iPhone|iPod|iPad)/i;
-  const [platform, setPlatform] = useState();
-  useEffect(() => {
-    setPlatform(navigator.platform);
-  });
+  // const expression = /(Mac|iPhone|iPod|iPad)/i;
+  // const [platform, setPlatform] = useState();
+  // useEffect(() => {
+  //   setPlatform(navigator.platform);
+  // });
 
   useEffect(() => {
     if (videoRef.current) {
@@ -36,19 +36,13 @@ export default function Image_video({
     <>
       {ext == "mp4" || ext == "webm" || ext == "mov" ? (
      
-        <>
+        
         <VideoSection
           mp4_file_name={mp4_file_name}
           file_loc={file_loc}
           webm_file_name={webm_file_name}
         />
 
-        <VideoSection
-          mp4_file_name={webm_file_name}
-          file_loc={file_loc}
-          webm_file_name={mp4_file_name}
-        />
-        </>
 
       ) : (
         <Image

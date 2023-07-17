@@ -176,7 +176,7 @@ export default function Header({ siteSettings }) {
               <Link href="/contact" onClick={handleClickLink}>Contact Us</Link>
             </li>
             <li className="btn_blk">
-              <Link href="/login" className="site_btn" onClick={handleClickLink}>
+              <Link href="/login" className="site_btn" >
                 Login
               </Link>
             </li>

@@ -113,8 +113,8 @@ export default function Index({ result }) {
                 
                   <Image
                     src={cmsFileUrl(site_content.image2)}
-                    width={50}
-                    height={50}
+                    width={100}
+                    height={100}
                     alt="icon"
                   />
                 </div>
@@ -129,8 +129,8 @@ export default function Index({ result }) {
                 <div className="img_icon">
                   <Image
                     src={cmsFileUrl(site_content.image3)}
-                    width={50}
-                    height={50}
+                    width={100}
+                    height={100}
                     alt="icon"
                   />
                 </div>
@@ -145,8 +145,8 @@ export default function Index({ result }) {
                 <div className="img_icon">
                   <Image
                     src={cmsFileUrl(site_content.image4)}
-                    width={50}
-                    height={50}
+                    width={100}
+                    height={100}
                     alt="icon3"
                   />
                 </div>
@@ -178,7 +178,7 @@ export default function Index({ result }) {
                  
                   <Image
                     src={cmsFileUrl(site_content.image5)}
-                    width={742}
+                    width={1800}
                     height={519}
                     alt="Expirence Image"
                   />
@@ -212,7 +212,7 @@ export default function Index({ result }) {
                  
                   <Image
                     src={cmsFileUrl(site_content.image11)}
-                    width={742}
+                    width={1800}
                     height={519}
                     alt="Expirence Image"
                   />
@@ -246,7 +246,7 @@ export default function Index({ result }) {
                  
                   <Image
                     src={cmsFileUrl(site_content.image12)}
-                    width={742}
+                    width={1800}
                     height={519}
                     alt="Expirence Image"
                   />
@@ -314,8 +314,8 @@ export default function Index({ result }) {
                            
                             <Image
                               src={cmsFileUrl(val.icon)}
-                              width={50}
-                              height={50}
+                              width={100}
+                              height={100}
                               alt={val.title}
                             />
                           </div>
@@ -399,8 +399,8 @@ export default function Index({ result }) {
                         
                         <Image
                           src={cmsFileUrl(site_content.image6)}
-                          width={35}
-                          height={35}
+                          width={100}
+                          height={100}
                           alt="icon"
                         />
                       </div>
@@ -421,8 +421,8 @@ export default function Index({ result }) {
                       <div className="icon_img">
                         <Image
                           src={cmsFileUrl(site_content.image7)}
-                          width={35}
-                          height={35}
+                          width={100}
+                          height={100}
                           alt="icon"
                         />
                       </div>
@@ -441,8 +441,8 @@ export default function Index({ result }) {
                       <div className="icon_img">
                         <Image
                           src={cmsFileUrl(site_content.image8)}
-                          width={35}
-                          height={35}
+                          width={100}
+                          height={100}
                           alt="icon"
                         />
                       </div>
@@ -461,8 +461,8 @@ export default function Index({ result }) {
                       <div className="icon_img">
                         <Image
                           src={cmsFileUrl(site_content.image9)}
-                          width={35}
-                          height={35}
+                          width={100}
+                          height={100}
                           alt="icon"
                         />
                       </div>

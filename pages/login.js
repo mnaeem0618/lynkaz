@@ -41,7 +41,7 @@ export default function Login({ result }) {
               
                 <Image
                   src={cmsFileUrl(site_content.image1)}
-                  width={660}
+                  width={1300}
                   height={252}
                   alt="login"
                 />
@@ -66,7 +66,7 @@ export default function Login({ result }) {
                 <Link href="/">
                   <Image
                     src={cmsFileUrl(meta_tags.site_logo)}
-                    width={300}
+                    width={900}
                     height={60}
                     alt={meta_tags.site_name}
                   />

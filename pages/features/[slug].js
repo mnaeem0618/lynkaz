@@ -85,8 +85,8 @@ export default function features({ result }) {
                             
                             <Image
                               src={cmsFileUrl(card.image, "features")}
-                              width={35}
-                              height={35}
+                              width={100}
+                              height={100}
                               alt="icon"
                             />
                           </div>
@@ -125,7 +125,7 @@ export default function features({ result }) {
                            
                             <Image
                               src={cmsFileUrl(val.image, "features")}
-                              width={585}
+                              width={1800}
                               height={459}
                               alt="image"
                             />

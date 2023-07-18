@@ -52,7 +52,7 @@ export default function About({ result }) {
                 <div className="image">
                   <Image
                     src={cmsFileUrl(site_content.image1)}
-                    width={510}
+                    width={1200}
                     height={510}
                     alt="about-image"
                   />
@@ -134,7 +134,7 @@ export default function About({ result }) {
                 <div className="image">
                   <Image
                     src={cmsFileUrl(site_content.image2)}
-                    width={555}
+                    width={1350}
                     height={423}
                     alt="about-image2"
                   />
@@ -152,7 +152,7 @@ export default function About({ result }) {
                 <div className="image">
                   <Image
                     src={cmsFileUrl(site_content.image3)}
-                    width={486}
+                    width={1350}
                     height={400}
                     alt="about-image3"
                   />

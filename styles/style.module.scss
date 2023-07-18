@@ -870,12 +870,13 @@
     .flex{
       .colL{
         padding-left: 4rem;
+        align-self: center;
         .image{
           padding-bottom: 140%;
           @include radius(8px);
           img{
             object-fit: contain;
-            object-position: bottom;
+            object-position: center;
           }
         }
       }
@@ -1953,6 +1954,9 @@
         background-color: transparent;
         // filter: drop-shadow(0px 3.72222px 46.5278px rgba(35, 41, 214, 0.13));
         z-index: 2;
+        @include ipad_pro{
+          width: 100%;
+        }
         @include ipad{
           width: 100%;
           position: relative;

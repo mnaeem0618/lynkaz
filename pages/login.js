@@ -41,8 +41,8 @@ export default function Login({ result }) {
               
                 <Image
                   src={cmsFileUrl(site_content.image1)}
-                  width={1300}
-                  height={252}
+                  width={3000}
+                  height={2500}
                   alt="login"
                 />
               </div>

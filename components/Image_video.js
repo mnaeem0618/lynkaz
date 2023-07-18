@@ -13,8 +13,8 @@ export default function Image_video({
   webm_file_name,
   file_loc = "images",
   poster,
-  img_width = "1800",
-  img_height = "447",
+  img_width = "3000",
+  img_height = "2500",
   vid_width = "1880",
   vid_height = "1224",
 }) {

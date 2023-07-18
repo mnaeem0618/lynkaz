@@ -125,8 +125,8 @@ export default function features({ result }) {
                            
                             <Image
                               src={cmsFileUrl(val.image, "features")}
-                              width={1800}
-                              height={459}
+                              width={3000}
+                              height={2500}
                               alt="image"
                             />
                           </div>

@@ -79,8 +79,8 @@ export default function Solutions({ result }) {
                          
                           <Image
                             src={cmsFileUrl(val.image, "solutions")}
-                            width={1800}
-                            height={372}
+                            width={3000}
+                            height={2500}
                             alt={val.title}
                           />
                         </div>

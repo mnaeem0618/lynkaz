@@ -178,8 +178,8 @@ export default function Index({ result }) {
                  
                   <Image
                     src={cmsFileUrl(site_content.image5)}
-                    width={1800}
-                    height={519}
+                    width={3000}
+                    height={2500}
                     alt="Expirence Image"
                   />
                 </div>
@@ -212,8 +212,8 @@ export default function Index({ result }) {
                  
                   <Image
                     src={cmsFileUrl(site_content.image11)}
-                    width={1800}
-                    height={519}
+                    width={3000}
+                    height={2500}
                     alt="Expirence Image"
                   />
                 </div>
@@ -246,8 +246,8 @@ export default function Index({ result }) {
                  
                   <Image
                     src={cmsFileUrl(site_content.image12)}
-                    width={1800}
-                    height={519}
+                    width={3000}
+                    height={2500}
                     alt="Expirence Image"
                   />
                 </div>
@@ -503,8 +503,8 @@ export default function Index({ result }) {
                 
                   <Image
                     src={cmsFileUrl(site_content.image10)}
-                    width={615}
-                    height={412}
+                    width={3000}
+                    height={2500}
                     alt="image"
                   />
                 </div>

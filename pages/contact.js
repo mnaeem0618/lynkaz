@@ -9,6 +9,7 @@ import http from "../helpers/http";
 import MetaGenerator from "@/components/meta-generator";
 import { TOAST_SETTINGS } from "@/config/settings";
 import { toast } from "react-toastify";
+import InputMask from "react-input-mask";
 
 export const getServerSideProps = async () => {
   const result = await http
@@ -257,9 +258,9 @@ export default function Contact({ result }) {
                         />
                       </div>
                       <div className="form_blk">
-                        <input
+                        <InputMask
                           id="frm-phone"
-                          type="text"
+                          mask="+99 (999) 999-9999"
                           name="phone"
                           value={form.phone}
                           onChange={handleChange}

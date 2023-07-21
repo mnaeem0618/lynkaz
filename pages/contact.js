@@ -260,7 +260,7 @@ export default function Contact({ result }) {
                       <div className="form_blk">
                         <InputMask
                           id="frm-phone"
-                          mask="+99 (999) 999-9999"
+                          mask="+9 (999) 999-9999"
                           name="phone"
                           value={form.phone}
                           onChange={handleChange}

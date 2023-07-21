@@ -259,7 +259,7 @@ export default function Contact({ result }) {
                       <div className="form_blk">
                         <input
                           id="frm-phone"
-                          type="text"
+                          type="tel"
                           name="phone"
                           value={form.phone}
                           onChange={handleChange}

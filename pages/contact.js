@@ -295,7 +295,7 @@ export default function Contact({ result }) {
                           <option value="">-- Select Country --</option>
                           {countries.map((val, i) => {
                             return (
-                              <option value={val.name}>{val.name}</option>
+                              <option value={val.name} key={val.id}>{val.name}</option>
                               )
                           })}
                           

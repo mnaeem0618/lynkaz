@@ -89,7 +89,7 @@ export default function Index({ result }) {
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
                   <div className="intro_lbl_banner" onClick={ToggleVideoPop}>
-                    <span>View Intro</span>
+                    <span><Text string={site_content.banner_intro_vid_btn} /></span>
                     <img src="/images/PlayCircle.svg" alt="" />
                   </div>
                 </div>

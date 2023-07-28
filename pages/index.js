@@ -9,7 +9,7 @@ import Image_video from "@/components/Image_video";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
-const OwlCarousel = dynamic(import("react-owl-carousel"), {ssr: false});
+const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
 import http from "../helpers/http";
 import MetaGenerator from "@/components/meta-generator";
 
@@ -28,37 +28,38 @@ export default function Index({ result }) {
     loop: true,
     dots: false,
     nav: true,
-    navText: ['<img src="images/left-angle.svg" />','<img src="images/right-angle.svg" />'],
+    navText: [
+      '<img src="images/left-angle.svg" />',
+      '<img src="images/right-angle.svg" />',
+    ],
     smartSpeed: 1000,
-    center:true,
+    center: true,
     responsiveClass: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       580: {
-        items: 1
+        items: 1,
       },
       991: {
-        items: 1
+        items: 1,
       },
       1200: {
-        items: 1
+        items: 1,
       },
       1600: {
-        items: 1
-      }
-    }
-    
+        items: 1,
+      },
+    },
   };
   const { meta_tags, site_content, home_features } = result;
 
- 
-  const [introVideo , setIntroVideo] = useState(false);
+  const [introVideo, setIntroVideo] = useState(false);
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
   const ToggleVideoPop = () => {
     setIntroVideo(!introVideo);
-  }
+  };
   return (
     <>
       <MetaGenerator
@@ -88,17 +89,18 @@ export default function Index({ result }) {
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
                   <div className="intro_lbl_banner" onClick={ToggleVideoPop}>
-                    <span>View Intro</span><img src="/images/PlayCircle.svg" alt="" />
+                    <span>View Intro</span>
+                    <img src="/images/PlayCircle.svg" alt="" />
                   </div>
                 </div>
               </div>
               <div className="colR">
                 <Shape />
                 <div className="image">
-                
-
-                  <Image_video mp4_file_name={site_content.file1} webm_file_name={site_content.file2} />
-                
+                  <Image_video
+                    mp4_file_name={site_content.file1}
+                    webm_file_name={site_content.file2}
+                  />
                 </div>
               </div>
             </div>
@@ -108,15 +110,12 @@ export default function Index({ result }) {
           <div className="contain">
             <div className="cntnt text-center">
               <div className="sec_heading">
-               
                 <Text string={site_content.section1_text} />
               </div>
-             
             </div>
             <div className="flex">
               <div className="col">
                 <div className="img_icon">
-                
                   <Image
                     src={cmsFileUrl(site_content.image2)}
                     width={100}
@@ -163,7 +162,6 @@ export default function Index({ result }) {
                   <Text string={site_content.sec1_text4} />
                 </p>
               </div>
-             
             </div>
           </div>
         </section>
@@ -181,7 +179,6 @@ export default function Index({ result }) {
             <div className="flex grid_flex">
               <div className="colL">
                 <div className="image">
-                 
                   <Image
                     src={cmsFileUrl(site_content.image5)}
                     width={3000}
@@ -215,7 +212,6 @@ export default function Index({ result }) {
             <div className="flex grid_flex grid_flex_reverse">
               <div className="colL">
                 <div className="image">
-                 
                   <Image
                     src={cmsFileUrl(site_content.image11)}
                     width={3000}
@@ -249,7 +245,6 @@ export default function Index({ result }) {
             <div className="flex grid_flex">
               <div className="colL">
                 <div className="image">
-                 
                   <Image
                     src={cmsFileUrl(site_content.image12)}
                     width={3000}
@@ -317,7 +312,6 @@ export default function Index({ result }) {
                           role="tablist"
                         >
                           <div className="img_icon">
-                           
                             <Image
                               src={cmsFileUrl(val.icon)}
                               width={100}
@@ -353,10 +347,9 @@ export default function Index({ result }) {
                         >
                           <div className="colL">
                             <div className="sec_heading">
-                            
                               <Text string={val.details} />
                             </div>
-                            
+
                             <div className="btn_blk">
                               <Link
                                 href={val.link_url}
@@ -372,7 +365,6 @@ export default function Index({ result }) {
                           </div>
                           <div className="colR">
                             <div className="image">
-                             
                               {/* <Image
                                 src={cmsFileUrl(val.image)}
                                 width={585}
@@ -381,8 +373,10 @@ export default function Index({ result }) {
                               /> */}
 
                               {/* <Image_video mp4_file_name={val.image} webm_file_name={val.image} img_width="585" img_height="468" vid_width="585" vid_height="468"/> */}
-                              <Image_video mp4_file_name={val.image} webm_file_name={val.webm_file} />
-
+                              <Image_video
+                                mp4_file_name={val.image}
+                                webm_file_name={val.webm_file}
+                              />
                             </div>
                           </div>
                         </motion.div>
@@ -506,7 +500,6 @@ export default function Index({ result }) {
               </div>
               <div className="colR">
                 <div className="image">
-                
                   <Image
                     src={cmsFileUrl(site_content.image10)}
                     width={3000}
@@ -524,9 +517,22 @@ export default function Index({ result }) {
           <div className="table_cell">
             <div className="_inner">
               <div className="x_btn" onClick={ToggleVideoPop}></div>
-                <div className="intro_video_popup">
-                  <Image_video mp4_file_name={site_content.file1} webm_file_name={site_content.file2} />
-                </div>
+              <div className="intro_video_popup">
+                
+                <video
+                  src={cmsFileUrl(site_content.video1, "videos")}
+                  className="CuAnimation_video__70Pvw"
+                  id="lazy-video"
+                  autoPlay={true}
+                  // muted={true}
+                  // loop={true}
+                  playsInline={true}
+                  controls
+                >
+    <source src={cmsFileUrl(site_content.video1, "videos")} type="video/mp4" />
+                </video>
+                
+              </div>
             </div>
           </div>
         </div>

@@ -2407,3 +2407,48 @@ ul{
     margin-bottom: 1.5rem;
   }
 }
+
+.intro_lbl_banner{
+  @include flex;
+  column-gap: .4rem;
+  @include trans;
+  cursor: pointer;
+  span{
+    font-family: 'Bold';
+    align-self: center;
+    @include trans;
+  }
+  img{
+    width: 2.3rem;
+    height: 2.3rem;
+    align-self: center;
+  }
+  &:hover{
+    @include trans;
+    span{
+      color: $color;
+      @include trans;
+    }
+  }
+}
+
+
+// ====popup video=======
+.intro_video_popup{
+  // width: 66rem;
+  padding-bottom: 70%;
+    position: relative;
+  overflow: hidden;
+  filter: drop-shadow(0px 4px 50px rgba(133, 17, 135, 0.11));
+  @include ipad{
+    width: 100%;
+    position: relative;
+  }
+  video{
+    object-fit: cover;
+    inline-size: 100%;
+    block-size: 100%;
+    padding: 0;
+    @include pos;
+  }
+}

@@ -54,8 +54,11 @@ export default function Index({ result }) {
   const { meta_tags, site_content, home_features } = result;
 
  
-
+  const [introVideo , setIntroVideo] = useState(false);
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
+  const ToggleVideoPop = () => {
+    setIntroVideo(!introVideo);
+  }
   return (
     <>
       <MetaGenerator
@@ -84,6 +87,9 @@ export default function Index({ result }) {
                     </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
+                  <div className="intro_lbl_banner" onClick={ToggleVideoPop}>
+                    <span>View Intro</span><img src="/images/PlayCircle.svg" alt="" />
+                  </div>
                 </div>
               </div>
               <div className="colR">
@@ -513,6 +519,18 @@ export default function Index({ result }) {
           </div>
         </section>
       </main>
+      <div className={introVideo ? "popup lg active" : "popup lg"}>
+        <div className="table_dv">
+          <div className="table_cell">
+            <div className="_inner">
+              <div className="x_btn" onClick={ToggleVideoPop}></div>
+                <div className="intro_video_popup">
+                  <Image_video mp4_file_name={site_content.file1} webm_file_name={site_content.file2} />
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

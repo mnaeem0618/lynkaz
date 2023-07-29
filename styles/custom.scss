@@ -788,6 +788,9 @@ column-gap: 1.5rem;
     padding: 0;
     overflow: auto;
     z-index: 101;
+    &.active{
+      display: flex;
+    }
     > .table_dv {
         @include fill;
         @include flex($justify: center, $flow: wrap);

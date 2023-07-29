@@ -102,11 +102,11 @@
       }
       .btn_blk{
         margin-top: 2rem;
-        @include mobile_sm{
-          .site_btn{
-            width: 100%;
-          }
-        }
+        // @include mobile_sm{
+        //   .site_btn{
+        //     width: 100%;
+        //   }
+        // }
       }
       ul{
         @include list;
@@ -2413,6 +2413,7 @@ ul{
   column-gap: .4rem;
   @include trans;
   cursor: pointer;
+  margin-left: 1.5rem;
   span{
     font-family: 'Bold';
     align-self: center;

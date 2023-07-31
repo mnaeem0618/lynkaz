@@ -58,6 +58,8 @@ export default function Index({ result }) {
   const [introVideo, setIntroVideo] = useState(false);
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
   const ToggleVideoPop = () => {
+    document.querySelector('#pop-up-video').pause();
+    document.querySelector('#pop-up-video').currentTime = 0;
     setIntroVideo(!introVideo);
   };
   return (
@@ -522,7 +524,7 @@ export default function Index({ result }) {
                 <video
                   src={cmsFileUrl(site_content.video1, "videos")}
                   className="CuAnimation_video__70Pvw"
-                  id="lazy-video"
+                  id="pop-up-video"
                   autoPlay={true}
                   // muted={true}
                   // loop={true}

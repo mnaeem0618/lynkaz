@@ -528,8 +528,10 @@ export default function Index({ result }) {
                   autoPlay={true}
                   // muted={true}
                   // loop={true}
+                  height="100%"
+                  width="100%"
                   preload="none"
-                  playsInline={true}
+                  // playsInline={true}
                   poster="/images/intro_poster.png"
                   controls
                 >

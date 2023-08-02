@@ -529,9 +529,10 @@ export default function Index({ result }) {
                   // muted={true}
                   // loop={true}
                   playsInline={true}
+                  poster="/images/intro_poster.png"
                   controls
                 >
-    <source src={cmsFileUrl(site_content.video1, "videos")} type="video/mp4" />
+                  <source src={cmsFileUrl(site_content.video1, "videos")} type="video/mp4" />
                 </video>
                 
               </div>

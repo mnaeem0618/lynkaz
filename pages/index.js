@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Shape from "@/components/shape";
@@ -57,9 +57,12 @@ export default function Index({ result }) {
 
   const [introVideo, setIntroVideo] = useState(false);
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
+
+  const popvVideoRef = useRef(null);
+
   const ToggleVideoPop = () => {
-    document.querySelector('#pop-up-video').pause();
-    document.querySelector('#pop-up-video').currentTime = 0;
+    popvVideoRef.current.pause();
+    
     setIntroVideo(!introVideo);
   };
   return (
@@ -522,16 +525,16 @@ export default function Index({ result }) {
               <div className="intro_video_popup">
                 
                 <video
+                ref={popvVideoRef}
                   src={cmsFileUrl(site_content.video1, "videos")}
                   className="CuAnimation_video__70Pvw"
                   id="pop-up-video"
                   autoPlay={true}
                   // muted={true}
                   // loop={true}
-                  height="100%"
-                  width="100%"
+                  
                   preload="none"
-                  // playsInline={true}
+                  playsInline={true}
                   poster="/images/intro_poster.png"
                   controls
                 >

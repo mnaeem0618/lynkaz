@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Shape from "@/components/shape";
@@ -59,12 +59,33 @@ export default function Index({ result }) {
   const [openTab, setOpenTab] = React.useState(home_features[0]?.id);
 
   const popvVideoRef = useRef(null);
+  
 
-  const ToggleVideoPop = () => {
+  useEffect(() => {
+    document.querySelector('#pop-up-video').pause();
+
+  },[]);
+  // popvVideoRef.current.pause(); 
+
+  const openVidPopup = () => {
+    popvVideoRef.current.play();
+    popvVideoRef.currentTime = 0;
+    setIntroVideo(true);
+  }
+
+  const closeVidPopup = () => {
     popvVideoRef.current.pause();
+    popvVideoRef.currentTime = 0;
+    setIntroVideo(false);
+  }
+
+  // const ToggleVideoPop = () => {
+  //   popvVideoRef.current.play();
+  //   popvVideoRef.currentTime = 0;
+
     
-    setIntroVideo(!introVideo);
-  };
+  //   setIntroVideo(!introVideo);
+  // };
   return (
     <>
       <MetaGenerator
@@ -93,7 +114,7 @@ export default function Index({ result }) {
                     </span>
                     <img src="images/circle-arrow-right.svg" alt="" />
                   </Link>
-                  <div className="intro_lbl_banner" onClick={ToggleVideoPop}>
+                  <div className="intro_lbl_banner" onClick={openVidPopup}>
                     <span><Text string={site_content.banner_intro_vid_btn} /></span>
                     <img src="/images/PlayCircle.svg" alt="" />
                   </div>
@@ -521,7 +542,7 @@ export default function Index({ result }) {
         <div className="table_dv">
           <div className="table_cell">
             <div className="_inner">
-              <div className="x_btn" onClick={ToggleVideoPop}></div>
+              <div className="x_btn" onClick={closeVidPopup}></div>
               <div className="intro_video_popup">
                 
                 <video

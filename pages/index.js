@@ -235,6 +235,7 @@ export default function Index({ result }) {
                 </div>
               </div>
             </div>
+            <div className="br"></div>
             <div className="flex grid_flex grid_flex_reverse">
               <div className="colL">
                 <div className="image">
@@ -268,6 +269,7 @@ export default function Index({ result }) {
                 </div>
               </div>
             </div>
+            
             <div className="flex grid_flex">
               <div className="colL">
                 <div className="image">

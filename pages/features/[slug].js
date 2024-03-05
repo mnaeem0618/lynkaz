@@ -26,8 +26,9 @@ export const getServerSideProps = async (context) => {
 export default function features({ result }) {
   
 
-  const {meta_tags, feature, feature_cards, site_content, sub_features} = result;
-  const [openTab, setOpenTab] = useState(1);
+  const {meta_tags, feature, feature_cards, site_content, sub_features, feature_sec1} = result;
+  
+  const [openTab, setOpenTab] = useState(feature_sec1[0]?.id);
 
 
   if (meta_tags != undefined) {
@@ -77,129 +78,41 @@ export default function features({ result }) {
             <div className="contain">
                 <div className="flex">
                   <div className="colL">
-                    <div
-                        className={
-                          openTab === 1
-                            ? "block"
-                            : "hidden"
-                        }
-                      >
-                        <div className="image">
-                          <img src="/images/f3.png" alt="" />
-                        </div>
-                        
-                      </div>
+                  {feature_sec1?.map((sec1) => {
+                    return (
                       <div
+                      key={sec1?.id}
                         className={
-                          openTab === 2
+                          openTab === sec1?.id
                             ? "block"
                             : "hidden"
                         }
                       >
                         <div className="image">
-                          <img src="/images/f4.png" alt="" />
+                          <img src={cmsFileUrl(sec1?.image, 'features')} alt="" />
                         </div>
                         
                       </div>
-                      <div
-                        className={
-                          openTab === 3
-                            ? "block"
-                            : "hidden"
-                        }
-                      >
-                        <div className="image">
-                          <img src="/images/f5.png" alt="" />
-                        </div>
-                        
-                      </div>
-                      <div
-                        className={
-                          openTab === 4
-                            ? "block"
-                            : "hidden"
-                        }
-                      >
-                        <div className="image">
-                          <img src="/images/f3.png" alt="" />
-                        </div>
-                        
-                      </div>
-                      <div
-                        className={
-                          openTab === 5
-                            ? "block"
-                            : "hidden"
-                        }
-                      >
-                        <div className="image">
-                          <img src="/images/f4.png" alt="" />
-                        </div>
-                        
-                      </div>
-                      <div
-                        className={
-                          openTab === 6
-                            ? "block"
-                            : "hidden"
-                        }
-                      >
-                        <div className="image">
-                          <img src="/images/f5.png" alt="" />
-                        </div>
-                        
-                      </div>
+                    )
+                  })}
+                    
+                     
                   </div>
                   <div className="colR">
                     <ul className="scrollbar">
-                      <li onClick={() => setOpenTab(1)}>
+                    {feature_sec1?.map((sec1) => {
+                      return (
+                        <li onClick={() => setOpenTab(sec1?.id)} key={sec1?.id}>
                         <div className={
-                            "title_tab" + " " + (openTab === 1 ? "active" : "")
+                            "title_tab" + " " + (openTab === sec1?.id ? "active" : "")
                           }>
-                            <h4>Vendor Onboarding</h4>
-                            <p>Empowers organizations to efficiently manage vendor registration, enabling vendors to submit requests for registration or receive invitations, streamlining the process of becoming a registered vendor.</p>
+                            <h4>{sec1?.title}</h4>
+                            <p>{sec1?.detail}</p>
                           </div>
                       </li>
-                      <li onClick={() => setOpenTab(2)}>
-                        <div className={
-                            "title_tab" + " " + (openTab === 2 ? "active" : "")
-                          }>
-                            <h4>Vendor Profile Management</h4>
-                            <p>Offers a centralized platform for vendors to maintain and update their profiles, ensuring accurate and up-to-date vendor information for seamless procurement interactions.</p>
-                          </div>
-                      </li>
-                      <li onClick={() => setOpenTab(3)}>
-                        <div className={
-                            "title_tab" + " " + (openTab === 3 ? "active" : "")
-                          }>
-                            <h4>Online Document Management</h4>
-                            <p>Provides vendors with a hassle-free platform to maintain and update their trading documents securely on an online portal, eliminating the need for manual document submissions via email</p>
-                          </div>
-                      </li>
-                      <li onClick={() => setOpenTab(4)}>
-                        <div className={
-                            "title_tab" + " " + (openTab === 4 ? "active" : "")
-                          }>
-                            <h4>Vendor Compliance Management</h4>
-                            <p>Offers a suite of customizable settings to ensure vendors meet specified compliance requirements, enhancing transparency and adherence to standards.</p>
-                          </div>
-                      </li>
-                      <li onClick={() => setOpenTab(5)}>
-                        <div className={
-                            "title_tab" + " " + (openTab === 5 ? "active" : "")
-                          }>
-                            <h4>Seamless Collaboration</h4>
-                            <p>In Any Document facilitates efficient and interactive communication between vendors and buyers within documents, fostering streamlined collaboration and enhancing procurement efficiency.</p>
-                          </div>
-                      </li>
-                      <li onClick={() => setOpenTab(6)}>
-                        <div className={
-                            "title_tab" + " " + (openTab === 6 ? "active" : "")
-                          }>
-                            <h4>Vendor User Management</h4>
-                            <p>Empowers organizations to effectively manage and control user access within the vendor profile.</p>
-                          </div>
-                      </li>
+                      )
+                    })}
+                      
                     </ul>
                   </div>
                   
